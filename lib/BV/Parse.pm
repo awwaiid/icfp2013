@@ -205,7 +205,7 @@ func gen_exp($max_cost, $ops) {
               my $right_cost = shift @$right;
               push @results, [
                 ($right_cost + 1),
-                not => $right];
+                $op => $right];
             }
           }
         }
