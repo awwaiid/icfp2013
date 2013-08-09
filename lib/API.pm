@@ -21,7 +21,7 @@ API - Uses the API to get metadata, examples, and guess programs
 =cut
 
 sub call {
-    my ($path, $params ) = @_;
+    my ($path, $params, $is_dry_run ) = @_;
     my $json = ref $params ? encode_json( $params ) : $params;
 
     open my $fh, '<', "secret.txt" or die "Can't open secret.txt - $!";
@@ -30,11 +30,13 @@ sub call {
 
     my $url = "http://icfpc2013.cloudapp.net/$path?auth=${auth}vpsH1H";
 
-say STDERR "url: $url json: $json";
     my $ua = LWP::UserAgent->new;
     my $response = $ua->post( $url, Content => $json );
+# p($response);
 
-    return decode_json( $response->content );
+    return decode_json( $response->content ) unless $is_dry_run;
+
+    say "url: $url json: $json" if $is_dry_run;
 }
 
 sub build_guess {
@@ -44,12 +46,12 @@ sub build_guess {
 }
 
 sub make_guess {
-    my ($id, $program) = @_;
+    my ($id, $program, $is_dry_run) = @_;
 
     my $content = build_guess( $id, $program );
     return unless $content;
 
-    return call( 'guess', $content );
+    return call( 'guess', $content, $is_dry_run );
 }
 
 
@@ -70,12 +72,27 @@ sub build_eval {
 }
 
 sub make_eval {
-    my ( $id, $program, $args ) = @_;
+    my ( $id, $program, $args, $is_dry_run ) = @_;
 
     my $content = build_eval( $id, $program, $args );
     return unless $content;
 
-    return call( 'eval', $content );
+    return call( 'eval', $content, $is_dry_run );
+}
+
+sub get_problems {
+    return call( 'myproblems' );
+}
+
+sub get_pending_problems {
+    my $problems = get_problems();
+    my @pending = ();
+
+    for my $prob ( @$problems ) {
+        push @pending, $prob if ! $prob->{solved};
+    }
+
+    return \@pending;
 }
 
 1;
