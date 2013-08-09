@@ -8,12 +8,16 @@ has vars => ( is => 'rw' );
 
 # Now THIS is what I call a parser. Suck it.
 method parse($str) {
-  $self->vars({}); # reset vars
   $str =~ tr/()/[]/;
   $str =~ tr/ /,/;
   $str =~ s/(\w+)/'$1'/g;
   return eval($str);
   # eval($str =~ tr/() /[],/r =~ s/(\w+)/'$1'/gr)
+}
+
+method evaluate($exp, $v) {
+  $self->vars({}); # reset vars
+  return $self->interp(clone($exp), $v);
 }
 
 method interp($exp, $v) {
