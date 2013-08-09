@@ -16,3 +16,7 @@ git:
 * git rec / git add / git commit
 * git push
 
+setup:
+* cpanm carton
+* carton install
+
