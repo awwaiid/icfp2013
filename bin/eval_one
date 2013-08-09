@@ -1,0 +1,15 @@
+#!/usr/bin/env perl
+
+use lib 'lib';
+use ICFP;
+use BV::Parse;
+
+my $parser = BV::Parse->new;
+
+my $program = shift;
+my $input = shift;
+
+my $parsed_program = $parser->parse($program);
+my $result = $parser->evaluate($parsed_program, $input);
+printf "result: 0x%016X\n", $result;
+
