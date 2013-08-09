@@ -7,18 +7,18 @@ use BV::Parse;
 my $parser = BV::Parse->new;
 
 use Data::Printer;
-my $x = $parser->parse("(lambda (x_70124) (fold (shr1 (shl1 x_70124)) (and (and (if0 (or (shr1 (and (shr4 (plus 0 (shr1 1))) 0)) x_70124) 1 x_70124) x_70124) x_70124) (lambda (x_70125 x_70126) (if0 x_70125 x_70126 x_70125))))");
+#my $x = $parser->parse("(lambda (x_70124) (fold (shr1 (shl1 x_70124)) (and (and (if0 (or (shr1 (and (shr4 (plus 0 (shr1 1))) 0)) x_70124) 1 x_70124) x_70124) x_70124) (lambda (x_70125 x_70126) (if0 x_70125 x_70126 x_70125))))");
 # my $x = $parser->parse("(lambda (x_70124) (plus x_70124 1))");
-p $x;
+#p $x;
 
-my $result = $parser->evaluate($x, 5);
-p $result;
+#my $result = $parser->evaluate($x, 5);
+#p $result;
 
-my $ops = BV::Parse::limit_ops([qw( not shr1 )]);
-p $ops;
-my $combos = BV::Parse::gen_exp(3, $ops);
-p $combos;
+#my $ops = BV::Parse::limit_ops([qw( not shr1 )]);
+#p $ops;
+#my $combos = BV::Parse::gen_exp(3, $ops);
+#p $combos;
 
-my $out = BV::Parse::generate(5, [qw( if0 )]);
+my $out = BV::Parse::generate(5, [qw( and not )]);
 p $out;
 

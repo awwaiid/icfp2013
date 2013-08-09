@@ -1,0 +1,11 @@
+#!/usr/bin/env perl
+
+use v5.14;
+use lib 'lib';
+use ICFP;
+use BV::Parse;
+
+my $count = shift @ARGV;
+my $out = BV::Parse::generate($count, [@ARGV]);
+say join("\n", @$out);
+
