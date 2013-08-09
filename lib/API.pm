@@ -30,10 +30,52 @@ sub call {
 
     my $url = "http://icfpc2013.cloudapp.net/$path?auth=${auth}vpsH1H";
 
+say STDERR "url: $url json: $json";
     my $ua = LWP::UserAgent->new;
     my $response = $ua->post( $url, Content => $json );
 
     return decode_json( $response->content );
+}
+
+sub build_guess {
+    my ( $id, $program ) = @_;
+
+    return { id => $id, program => $program };
+}
+
+sub make_guess {
+    my ($id, $program) = @_;
+
+    my $content = build_guess( $id, $program );
+    return unless $content;
+
+    return call( 'guess', $content );
+}
+
+
+sub build_eval {
+    my ( $id, $program, $args ) = @_;
+
+    return undef if ! ( $id xor $program );
+
+    my $struct = { arguments => $args };
+    if ( $id ) {
+        $struct->{id} = $id;
+    }
+    else {
+        $struct->{program} = $program;
+    }
+
+    return $struct;
+}
+
+sub build_eval {
+    my ( $id, $program, $args ) = @_;
+
+    my $content = build_eval( $id, $program, $args );
+    return unless $content;
+
+    return call( 'eval', $content );
 }
 
 1;
