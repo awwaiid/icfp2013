@@ -137,6 +137,7 @@ func limit_ops($ops_list) {
 #   min_cost1 => [ opA opB opC ],
 #   min_cost2 => [ opD opE opF ],
 # }
+
 func gen_exp($max_cost, $ops) {
   my @results;
   push @results, [1, 0];
@@ -233,7 +234,7 @@ func generate($cost, $ops) {
     grep { $_->[0] == ($cost - 1) } @$combos
   ];
   shift @$_ foreach @$combos;
-  return [ map { render( [ lambda => ['x'], $_ ]) } @$combos ];
+  return [ map { render(['lambda (x)', $_ ]) } @$combos ];
 }
 
 
