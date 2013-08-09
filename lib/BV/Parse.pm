@@ -3,6 +3,7 @@ package BV::Parse;
 use Data::Dumper;
 use Clone qw(clone);
 use integer;
+use Math::Int64 qw( uint64 uint64_rand );
 
 has tree => ( is => 'rw' );
 
@@ -13,18 +14,36 @@ method parse($str) {
   $str =~ tr/()/[]/;
   $str =~ tr/ /,/;
   $str =~ s/(\w+)/'$1'/g;
-  return eval($str);
+  # say "parsed: $str\n";
+  my $v = eval($str);
+  if($@) {
+    die "ERROR: $@";
+  }
+  return $v;
   # Or the short version:
   # eval($str =~ tr/() /[],/r =~ s/(\w+)/'$1'/gr)
 }
 
 method evaluate($exp, $v) {
   $self->vars({}); # reset vars
-  return $self->interp(clone($exp), $v);
+  my $v64 = uint64($v);
+  # printf "v64: 0x%016X (%s)\n", $v64, ref($v64);
+  # say "exp: " . Dumper($exp);
+  # return $self->interp(clone($exp), $v);
+  my $out = $self->interp(clone($exp), $v64);
+  # print "interp result: " . Dumper($out);
+  # printf "interp v64: 0x%016X\n", $out;
+  # printf "interp v64 str: 0x%s\n", Math::Int64::uint64_to_hex($out);
+  return $out;
 }
 
+  $| = 1;
 method interp($exp, $v) {
+  # say "here!";
   my $op = ref($exp) eq 'ARRAY' ? shift @$exp : $exp;
+  # say "interp(" . Dumper($exp) . ")";
+  # use Carp;
+  # Carp::cluck 'hmm' unless defined $op;
   given($op) {
 
     when('lambda') {
@@ -80,7 +99,7 @@ method interp($exp, $v) {
     when('plus') {
       my $left = $self->interp(shift @$exp);
       my $right = $self->interp(shift @$exp);
-      return 0+$left ^ 0+$right;
+      return 0+$left + 0+$right;
     }
 
     # Unary
@@ -94,7 +113,7 @@ method interp($exp, $v) {
     }
     when('shr1') {
       my $right = $self->interp(shift @$exp);
-      return (0+$right) >> 1;
+      return ($right) >> 1;
     }
     when('shr4') {
       my $right = $self->interp(shift @$exp);
@@ -106,8 +125,10 @@ method interp($exp, $v) {
     }
 
     # Simple constants and vars
-    when('0') { 0 }
-    when('1') { 1 }
+    # when('0') { 0 }
+    # when('1') { 1 }
+    when('0') { uint64(0) }
+    when('1') { uint64(1) }
     when(/^[a-z0-9_]+$/) { $self->vars->{$op} }
 
     default { die "UNKNOWN OP/VAL $op" }

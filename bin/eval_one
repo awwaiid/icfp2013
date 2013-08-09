@@ -11,13 +11,13 @@ my $parser = BV::Parse->new;
 
 my $program = shift @ARGV;
 my @inputs = map { eval($_) } @ARGV;
+my @inputs_hex = map { sprintf("0x%016X", $_) } @inputs;
 
 my $parsed_program = $parser->parse($program);
+# say parsed_program => Dumper($parsed_program);
 my @results = map { $parser->evaluate($parsed_program, $_) } @inputs;
 
-
-my $api_results = API::make_eval(undef, $program, [@inputs]);
-say Dumper($api_results->{outputs}[0]);
+my $api_results = API::make_eval(undef, $program, [@inputs_hex]);
 
 for my $n (0..@inputs-1) {
   my $r = eval($api_results->{outputs}[$n]);
