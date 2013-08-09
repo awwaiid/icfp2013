@@ -3576,6 +3576,67 @@
          "target" : "List::MoreUtils",
          "version" : "0.33"
       },
+      "Math::Int64" : {
+         "dist" : "Math-Int64-0.30",
+         "mymeta" : {
+            "abstract" : "Manipulate 64 bits integers in Perl",
+            "author" : [
+               "Salvador Fandino <sfandino@yahoo.com>"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.120921, CPAN::Meta::Converter version 2.132140",
+            "license" : [
+               "unknown"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "Math-Int64",
+            "no_index" : {
+               "directory" : [
+                  "t",
+                  "inc"
+               ]
+            },
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : "0"
+                  }
+               },
+               "configure" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : "0"
+                  }
+               },
+               "runtime" : {
+                  "requires" : {}
+               }
+            },
+            "release_status" : "stable",
+            "version" : "0.30"
+         },
+         "name" : "Math::Int64",
+         "pathname" : "S/SA/SALVA/Math-Int64-0.30.tar.gz",
+         "provides" : {
+            "Math::Int64" : {
+               "file" : "Math/Int64.pm",
+               "version" : "0.30"
+            },
+            "Math::Int64::die_on_overflow" : {
+               "file" : "Math/Int64/die_on_overflow.pm"
+            },
+            "Math::Int64::native_if_available" : {
+               "file" : "Math/Int64/native_if_available.pm"
+            },
+            "Math::UInt64" : {
+               "file" : "Math/UInt64.pm"
+            }
+         },
+         "target" : "Math::Int64",
+         "version" : "0.30"
+      },
       "Math::Random" : {
          "dist" : "Math-Random-0.71",
          "mymeta" : {
