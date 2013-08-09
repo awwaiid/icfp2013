@@ -299,6 +299,7 @@ func gridify($progs) {
     $grid->{$r} //= [];
     push $grid->{$r}, $program;
   }
+  @inputs = map { sprintf "0x%016X", $_ } @inputs;
   return [\@inputs, $grid];
 }
 
