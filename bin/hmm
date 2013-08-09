@@ -1,8 +1,10 @@
 #!/usr/bin/env perl
 
+use v5.14;
 use lib 'lib';
 use ICFP;
 use BV::Parse;
+use Data::Dumper;
 
 my $parser = BV::Parse->new;
 
@@ -19,6 +21,19 @@ use Data::Printer;
 #my $combos = BV::Parse::gen_exp(3, $ops);
 #p $combos;
 
-my $out = BV::Parse::generate(5, [qw( and not )]);
+my $out = BV::Parse::generate(7, [qw( and not shl1 shr16 )]);
 p $out;
+
+my ($inputs, $grid) = @{ BV::Parse::gridify($out) };
+
+print Dumper($grid);
+say "Key count: " . scalar keys %$grid;
+
+foreach my $key (keys %$grid) {
+  say substr($key, 0, 40) . ": " . scalar @{ $grid->{$key} };
+  my ($i2, $g2) = @{ BV::Parse::gridify( $grid->{$key} ) };
+  foreach my $key (keys %$g2) {
+    say "\t" . substr($key, 0, 40) . ": " . scalar @{ $g2->{$key} };
+  }
+}
 

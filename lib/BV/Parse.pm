@@ -282,5 +282,25 @@ sub gen_exp_normalize {
   # NORMALIZER => 'gen_exp_normalize',
 # );
 
+func gridify($progs) {
+  # my @inputs = map { uint64_rand() } 1..256;
+  my @inputs = map { uint64_rand() } 1..246;
+  push @inputs, map { uint64($_) } -4..5;
+  # print Dumper(\@inputs);
+  # my @inputs = map { uint64($_) } -127..128;
+
+  my $parser = BV::Parse->new;
+  my $grid = {};
+  foreach my $program (@$progs) {
+    my $parsed_program = $parser->parse($program);
+    my @results = map { $parser->evaluate($parsed_program, $_) } @inputs;
+    @results = map { sprintf "0x%016X", $_ } @results;
+    my $r = join(',',@results);
+    $grid->{$r} //= [];
+    push $grid->{$r}, $program;
+  }
+  return [\@inputs, $grid];
+}
+
 1;
 
