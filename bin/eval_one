@@ -7,7 +7,7 @@ use BV::Parse;
 my $parser = BV::Parse->new;
 
 my $program = shift;
-my $input = shift;
+my $input = eval(shift);
 
 my $parsed_program = $parser->parse($program);
 my $result = $parser->evaluate($parsed_program, $input);
