@@ -1,0 +1,33 @@
+#!/usr/bin/env perl
+
+use v5.14;
+use lib 'lib';
+use ICFP;
+use BV::Parse;
+use API;
+use Data::Printer;
+
+my $size = shift @ARGV;
+
+my $problems = API::get_pending_problems();
+
+$problems = [{ id => "KMlolB9TBARNWZftKO4mBppB", size => 3, operators => ["shr4"] } ];
+
+my $comm_cnt = 1;
+my $is_dry_run = 0;
+
+for my $problem ( @$problems ) {
+    next unless $problem->{size} == $size;
+    my $out = BV::Parse::generate($size, $problem->{operators});
+
+    for my $try ( @$out ) {
+say STDERR "guessing for id " . $problem->{id} . " and program $try";
+        my $response = API::make_guess( $problem->{id}, $try, $is_dry_run );
+p($response);
+        last if $response eq "time limit exceeded";
+        last if ref($response) eq 'HASH' && $response->{status} eq 'win';
+        $comm_cnt++;
+
+        sleep(20) if ! $comm_cnt % 5;
+    }
+}

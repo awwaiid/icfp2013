@@ -3,6 +3,7 @@ package API;
 use v5.14;
 use JSON;
 use LWP::UserAgent;
+use Try::Tiny;
 use Data::Printer;
 
 =head1 NAME
@@ -34,7 +35,20 @@ sub call {
     my $response = $ua->post( $url, Content => $json );
 # p($response);
 
-    return decode_json( $response->content ) unless $is_dry_run;
+    while ($response->content eq 'Too many requests' ) {
+        sleep( 1 );
+        $response = $ua->post( $url, Content => $json );
+    }
+
+    my $response_data;
+    try {
+        $response_data = decode_json( $response->content ) unless $is_dry_run;
+    }
+    catch {
+        $response_data = $response->content;
+    };
+
+    return $response_data unless $is_dry_run;
 
     say "url: $url json: $json" if $is_dry_run;
 }
