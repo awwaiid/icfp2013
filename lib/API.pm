@@ -69,7 +69,7 @@ sub build_eval {
     return $struct;
 }
 
-sub build_eval {
+sub make_eval {
     my ( $id, $program, $args ) = @_;
 
     my $content = build_eval( $id, $program, $args );
