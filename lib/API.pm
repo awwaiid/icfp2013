@@ -36,6 +36,7 @@ sub call {
 # p($response);
 
     while ($response->content eq 'Too many requests' ) {
+        say STDERR "timed out - sleeping";
         sleep( 1 );
         $response = $ua->post( $url, Content => $json );
     }

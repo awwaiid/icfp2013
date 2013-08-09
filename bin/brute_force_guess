@@ -11,7 +11,7 @@ my $size = shift @ARGV;
 
 my $problems = API::get_pending_problems();
 
-$problems = [{ id => "KMlolB9TBARNWZftKO4mBppB", size => 3, operators => ["shr4"] } ];
+# $problems = [{ id => "KMlolB9TBARNWZftKO4mBppB", size => 3, operators => ["shr4"] } ];
 
 my $comm_cnt = 1;
 my $is_dry_run = 0;
@@ -19,6 +19,14 @@ my $is_dry_run = 0;
 for my $problem ( @$problems ) {
     next unless $problem->{size} == $size;
     my $out = BV::Parse::generate($size, $problem->{operators});
+    
+    if ( scalar( @$out ) > 90 ) {
+        say STDERR "generated " . scalar( @$out ) . " functions - > 90 ... skipping";
+        next;
+    }
+
+    say STDERR "Trying " . scalar( @$out ) . " functions";
+    my $start_time = time();
 
     for my $try ( @$out ) {
 say STDERR "guessing for id " . $problem->{id} . " and program $try";
@@ -26,8 +34,11 @@ say STDERR "guessing for id " . $problem->{id} . " and program $try";
 p($response);
         last if $response eq "time limit exceeded";
         last if ref($response) eq 'HASH' && $response->{status} eq 'win';
-        $comm_cnt++;
 
-        sleep(20) if ! $comm_cnt % 5;
+#        $comm_cnt++;
+#        sleep(20) if ! $comm_cnt % 5;
     }
+    my $end_time = time();
+    say STDERR "Took " . ($end_time - $start_time) . " seconds";
+#    last;
 }

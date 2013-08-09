@@ -1,0 +1,43 @@
+#!/usr/bin/env perl
+
+use v5.14;
+use lib 'lib';
+use ICFP;
+use BV::Parse;
+use API;
+use Evaluator;
+use Data::Printer;
+
+my $size = shift @ARGV;
+
+my $problems;# = API::get_pending_problems();
+
+$problems = [{ id => "Z8xOhM78xUJsUQMkRvjh3S3u", size => 6, operators => ["not", "shl1", "shr16"] } ];
+
+my $is_dry_run = 1;
+
+for my $problem ( @$problems ) {
+    my $out = BV::Parse::generate( $size, $problem->{operators} );
+    my ($inputs, $solutions) = BV::Parse::gridify( $out );
+    my $thinned = Evaluator::eliminate_the_weak( $problem->{id}, $inputs, $solutions, $is_dry_run );
+
+#    while ( scalar( @$thinned ) > 90 ) {
+#        my ($new_inputs, $new_solutions) = BV::Parse::get_solutions( $size, $problem->{operators}, $thinned );
+#        my $thinned = Evaluator::eliminate_the_weak( $problem->{id}, $new_inputs, $new_solutions, $is_dry_run );
+#    }
+
+    say STDERR "Trying " . scalar( @$thinned ) . " functions";
+    my $start_time = time();
+
+    for my $program ( @$thinned ) {
+        say STDERR "guessing for id " . $problem->{id} . " and program $program";
+        my $response = API::make_guess( $problem->{id}, $program, $is_dry_run );
+        p($response);
+
+        last if $response eq "time limit exceeded";
+        last if ref($response) eq 'HASH' && $response->{status} eq 'win';
+    }
+    my $end_time = time();
+    say STDERR "Took " . ($end_time - $start_time) . " seconds";
+#    last;
+}
