@@ -117,7 +117,7 @@ my $all_ops = {
   # 1 => [qw( 0 1 x )],
   2 => [qw( not shl1 shr1 shr4 shr16 )],
   3 => [qw( and or xor plus )],
-  4 => [qw( if )],
+  4 => [qw( if0 )],
   5 => [qw( fold )],
 };
 
@@ -137,23 +137,33 @@ func limit_ops($ops_list) {
 #   min_cost1 => [ opA opB opC ],
 #   min_cost2 => [ opD opE opF ],
 # }
-func gen_exp($depth, $ops) {
-  if($depth == 1) {
-    return [qw( 0 1 x )];
+func gen_exp($max_cost, $ops) {
+  if($max_cost == 1) {
+    return [
+      [1, 0],
+      [1, 1],
+      [1, 'x'],
+    ];
+    return [1, qw( 0 1 x )];
   }
   my @results;
   foreach my $cost (keys %$ops) {
-    if($cost <= $depth) {
+    if($cost <= $max_cost) {
       foreach my $op (@{ $ops->{$cost} }) {
         given($op) {
           when('if0') {
-            my $conds = gen_exp($depth - 1, $ops);
-            my $iftrues = gen_exp($depth - 1, $ops);
-            my $iffalses = gen_exp($depth - 1, $ops);
+            my $conds = gen_exp($max_cost - 3, $ops);
             foreach my $cond (@$conds) {
+              my $cond_cost = shift @$cond;
+              my $iftrues = gen_exp($max_cost - $cond_cost - 2, $ops);
               foreach my $iftrue (@$iftrues) {
+                my $iftrue_cost = shift @$iftrue;
+                my $iffalses = gen_exp($max_cost - $cond_cost - $iftrue_cost - 1, $ops);
                 foreach my $iffalse (@$iffalses) {
-                  push @results, [if => $cond, $iftrue, $iffalse];
+                  my $iffalse_cost = shift @$iffalse;
+                  push @results, [
+                    (1 + $cond_cost + $iftrue_cost + $iffalse_cost),
+                    if0 => $cond, $iftrue, $iffalse];
                 }
               }
             }
@@ -179,72 +189,28 @@ func gen_exp($depth, $ops) {
           # }
 
           # Binary
-          when('and') {
-            my $lefts = gen_exp($depth - 1, $ops);
-            my $rights = gen_exp($depth - 1, $ops);
+          when(/and|or|xor|plus/) {
+            my $lefts = gen_exp($max_cost - 2, $ops);
             foreach my $left (@$lefts) {
+              my $left_cost = shift @$left;
+              my $rights = gen_exp($max_cost - $left_cost - 1, $ops);
               foreach my $right (@$rights) {
-                push @results, [and => $left, $right];
-              }
-            }
-          }
-          when('or') {
-            my $lefts = gen_exp($depth - 1, $ops);
-            my $rights = gen_exp($depth - 1, $ops);
-            foreach my $left (@$lefts) {
-              foreach my $right (@$rights) {
-                push @results, [or => $left, $right];
-              }
-            }
-          }
-          when('xor') {
-            my $lefts = gen_exp($depth - 1, $ops);
-            my $rights = gen_exp($depth - 1, $ops);
-            foreach my $left (@$lefts) {
-              foreach my $right (@$rights) {
-                push @results, [xor => $left, $right];
-              }
-            }
-          }
-          when('plus') {
-            my $lefts = gen_exp($depth - 1, $ops);
-            my $rights = gen_exp($depth - 1, $ops);
-            foreach my $left (@$lefts) {
-              foreach my $right (@$rights) {
-                push @results, [plus => $left, $right];
+                my $right_cost = shift @$right;
+                push @results, [
+                  ($left_cost + $right_cost + 1),
+                  $op => $left, $right];
               }
             }
           }
 
           # Unary
-          when('not') {
-            my $rights = gen_exp($depth - 1, $ops);
+          when(/not|shl1|shr1|shr4|shr16/) {
+            my $rights = gen_exp($max_cost - 1, $ops);
             foreach my $right (@$rights) {
-              push @results, [not => $right];
-            }
-          }
-          when('shl1') {
-            my $rights = gen_exp($depth - 1, $ops);
-            foreach my $right (@$rights) {
-              push @results, [shl1 => $right];
-            }
-          }
-          when('shr1') {
-            my $rights = gen_exp($depth - 1, $ops);
-            foreach my $right (@$rights) {
-              push @results, [shr1 => $right];
-            }
-          }
-          when('shr4') {
-            my $rights = gen_exp($depth - 1, $ops);
-            foreach my $right (@$rights) {
-              push @results, [shr4 => $right];
-            }
-          }
-          when('shr16') {
-            my $rights = gen_exp($depth - 1, $ops);
-            foreach my $right (@$rights) {
-              push @results, [shr16 => $right];
+              my $right_cost = shift @$right;
+              push @results, [
+                ($right_cost + 1),
+                not => $right];
             }
           }
         }
@@ -254,6 +220,24 @@ func gen_exp($depth, $ops) {
 
   return [ @results ];
 }
+
+func render($exp) {
+  if(! ref($exp)) {
+    return $exp;
+  } elsif( scalar @$exp == 1) {
+    return $exp->[0];
+  } else {
+    return '(' . join(' ', map { render($_) } @$exp) . ')';
+  }
+}
+
+func generate($depth, $ops) {
+  my $ops_struct = limit_ops($ops);
+  my $combos = gen_exp($depth - 1, $ops_struct);
+  shift @$_ foreach @$combos;
+  return [ map { render( [ lambda => ['x'], $_ ]) } @$combos ];
+}
+
 
 1;
 
