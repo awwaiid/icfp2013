@@ -1,5 +1,7 @@
 package BV::Parse;
 
+use Clone qw(clone);
+
 has tree => ( is => 'rw' );
 
 has vars => ( is => 'rw' );
@@ -8,9 +10,10 @@ has vars => ( is => 'rw' );
 method parse($str) {
   $self->vars({}); # reset vars
   $str =~ tr/()/[]/;
-  $str =~ s/ /,/g;
+  $str =~ tr/ /,/;
   $str =~ s/(\w+)/'$1'/g;
   return eval($str);
+  # eval($str =~ tr/() /[],/r =~ s/(\w+)/'$1'/gr)
 }
 
 method interp($exp, $v) {
@@ -33,7 +36,22 @@ method interp($exp, $v) {
     }
 
     when('fold') {
-      ...;
+      # (fold e0 e1 (lambda (x y) e2))
+      my $e0 = $self->interp(shift @$exp);
+      my $e1 = $self->interp(shift @$exp);
+      my $lambda = shift @$exp;
+      die "lambda expected!" unless shift @$lambda eq 'lambda';
+      my ($x, $y) = @{ shift @$lambda };
+      my $e2 = shift @$lambda;
+      my $y_val = $e1;
+      for(1..8) {
+        my $x_val = $e0 & 0xFF; # Grab just the rightmost byte
+        $e0 = $e0 >> 8;         # Shift over to get rid of that byte
+        $self->vars->{$x} = $x_val;
+        $self->vars->{$y} = $y_val;
+        $y_val = $self->interp(clone($e2));
+      }
+      return $y_val;
     }
 
     # Binary
@@ -83,7 +101,7 @@ method interp($exp, $v) {
     # Simple constants and vars
     when('0') { 0 }
     when('1') { 1 }
-    when(/^[a-z0-9_]+/) { $self->vars->{$op} }
+    when(/^[a-z0-9_]+$/) { $self->vars->{$op} }
 
     default { die "UNKNOWN OP/VAL $op" }
   }
