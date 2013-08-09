@@ -1,15 +1,27 @@
 #!/usr/bin/env perl
 
+use v5.14;
 use lib 'lib';
 use ICFP;
 use BV::Parse;
+use API;
+use Data::Dumper;
 
 my $parser = BV::Parse->new;
 
-my $program = shift;
-my $input = eval(shift);
+my $program = shift @ARGV;
+my @inputs = map { eval($_) } @ARGV;
 
 my $parsed_program = $parser->parse($program);
-my $result = $parser->evaluate($parsed_program, $input);
-printf "result: 0x%016X\n", $result;
+my @results = map { $parser->evaluate($parsed_program, $_) } @inputs;
+
+
+my $api_results = API::make_eval(undef, $program, [@inputs]);
+say Dumper($api_results->{outputs}[0]);
+
+for my $n (0..@inputs-1) {
+  my $r = eval($api_results->{outputs}[$n]);
+  printf "0x%016X -> local  0x%016X\n", $inputs[$n], $results[$n];
+  printf "                   -> remote 0x%016X\n", $r;
+}
 

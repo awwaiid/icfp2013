@@ -1,5 +1,6 @@
 package BV::Parse;
 
+use Data::Dumper;
 use Clone qw(clone);
 use integer;
 
@@ -139,6 +140,7 @@ func limit_ops($ops_list) {
 # }
 
 func gen_exp($max_cost, $ops) {
+  # say "gen_exp($max_cost)";
   my @results;
   push @results, [1, 0];
   push @results, [1, 1];
@@ -150,16 +152,18 @@ func gen_exp($max_cost, $ops) {
           when('if0') {
             my $conds = gen_exp($max_cost - 3, $ops);
             foreach my $cond (@$conds) {
-              my $cond_cost = shift @$cond;
+              # my $cond = clone $cond;
+              my $cond_cost = $cond->[0];
               my $iftrues = gen_exp($max_cost - $cond_cost - 2, $ops);
               foreach my $iftrue (@$iftrues) {
-                my $iftrue_cost = shift @$iftrue;
+                # my $iftrue = clone $iftrue;
+                my $iftrue_cost = $iftrue->[0];
                 my $iffalses = gen_exp($max_cost - $cond_cost - $iftrue_cost - 1, $ops);
                 foreach my $iffalse (@$iffalses) {
-                  my $iffalse_cost = shift @$iffalse;
+                  my $iffalse_cost = $iffalse->[0];
                   push @results, [
                     (1 + $cond_cost + $iftrue_cost + $iffalse_cost),
-                    if0 => $cond, $iftrue, $iffalse];
+                    [if0 => $cond->[1], $iftrue->[1], $iffalse->[1]]];
                 }
               }
             }
@@ -188,13 +192,17 @@ func gen_exp($max_cost, $ops) {
           when(/and|or|xor|plus/) {
             my $lefts = gen_exp($max_cost - 2, $ops);
             foreach my $left (@$lefts) {
-              my $left_cost = shift @$left;
+              # my $left = clone($left);
+              my $left_cost = $left->[0];
               my $rights = gen_exp($max_cost - $left_cost - 1, $ops);
+              # say "rights: " . Dumper($rights);
               foreach my $right (@$rights) {
-                my $right_cost = shift @$right;
+                # my $right = clone($right);
+                # say "right: " . Dumper($right);
+                my $right_cost = $right->[0];
                 push @results, [
                   ($left_cost + $right_cost + 1),
-                  $op => $left, $right];
+                  [$op => $left->[1], $right->[1]]];
               }
             }
           }
@@ -203,10 +211,10 @@ func gen_exp($max_cost, $ops) {
           when(/not|shl1|shr1|shr4|shr16/) {
             my $rights = gen_exp($max_cost - 1, $ops);
             foreach my $right (@$rights) {
-              my $right_cost = shift @$right;
+              my $right_cost = $right->[0];
               push @results, [
                 ($right_cost + 1),
-                $op => $right];
+                [$op => $right->[1]]];
             }
           }
         }
@@ -214,6 +222,7 @@ func gen_exp($max_cost, $ops) {
     }
   }
 
+  # say "gen_exp($max_cost) -> " . Dumper(\@results);
   return [ @results ];
 }
 
@@ -230,13 +239,27 @@ func render($exp) {
 func generate($cost, $ops) {
   my $ops_struct = limit_ops($ops);
   my $combos = gen_exp($cost - 1, $ops_struct);
-  $combos = [
-    grep { $_->[0] == ($cost - 1) } @$combos
+  # say "Combos: " . Dumper($combos);
+  return [
+    map { render(['lambda (x)', $_ ]) }
+    map { $_->[1] }
+    grep { $_->[0] == ($cost - 1) }
+    @$combos
   ];
-  shift @$_ foreach @$combos;
-  return [ map { render(['lambda (x)', $_ ]) } @$combos ];
 }
 
+use Memoize;
+use Storable qw( nfreeze );
+sub gen_exp_normalize {
+  return $_[0];
+  # say "dump: " . Dumper([@_]);
+  # my $f = Dumper([@_]);
+  # say STDERR "norm: $f";
+  # return $f;
+}
+# memoize('gen_exp',
+  # NORMALIZER => 'gen_exp_normalize',
+# );
 
 1;
 
