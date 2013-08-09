@@ -6,3 +6,10 @@ use BV::Parse;
 
 my $parser = BV::Parse->new;
 
+use Data::Printer;
+# my $x = $parser->parse("(lambda (x_70124) (fold (shr1 (shl1 x_70124)) (and (and (if0 (or (shr1 (and (shr4 (plus 0 (shr1 1))) 0)) x_70124) 1 x_70124) x_70124) x_70124) (lambda (x_70125 x_70126) (if0 x_70125 x_70126 x_70125))))");
+my $x = $parser->parse("(lambda (x_70124) (plus x_70124 1))");
+p $x;
+
+my $result = $parser->interp($x, 5);
+p $result;
