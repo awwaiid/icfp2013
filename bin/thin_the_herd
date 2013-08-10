@@ -12,25 +12,26 @@ my $size = shift @ARGV;
 
 my $problems = API::get_pending_problems();
 
-# $problems = [{ id => "6vA4h00XXD4P3d2OfJAMAbR0", size => 8, operators => ["or", "shl1", "xor"] } ];
+# $problems = [{ id => "0B3abjLBcQ4fGzA2LecYHWSQ", size => 6, operators => ["if0", "shl1",] } ];
 
 my $is_dry_run = 0;
 
 for my $problem ( @$problems ) {
-p($problem);
-if ( grep { $_ =~ /fold/ } @{ $problem->{operators} } ) {
-    say STDERR "oper has fold ... skipping";
-    next;
-}
-    my $out = BV::Parse::generate( $size, $problem->{operators} );
-    my ($inputs, $solutions) = @{ BV::Parse::gridify( $out ) };
-say "found " . scalar( @$solutions );
-    my $thinned = Evaluator::eliminate_the_weak( $problem->{id}, $inputs, $solutions, $is_dry_run );
-
-    if (scalar( @$thinned ) > 90) {
-        say STDERR "generated " . scalar( @$thinned ) . " functions - > 90 ... skipping";
+    next unless $problem->{size} == $size;
+#p($problem);
+    if ( grep { $_ =~ /fold/ } @{ $problem->{operators} } ) {
+        say STDERR "oper has fold ... skipping";
         next;
     }
+
+    my $out = BV::Parse::generate( $size, $problem->{operators} );
+    my ($inputs, $solutions) = @{ BV::Parse::gridify( $out ) };
+    my $thinned = Evaluator::eliminate_the_weak( $problem->{id}, $inputs, $solutions, $is_dry_run );
+
+#    if (scalar( @$thinned ) > 90) {
+#        say STDERR "generated " . scalar( @$thinned ) . " functions - > 90 ... skipping";
+#        next;
+#    }
 #    while ( scalar( @$thinned ) > 90 ) {
 #        my ($new_inputs, $new_solutions) = BV::Parse::get_solutions( $size, $problem->{operators}, $thinned );
 #        my $thinned = Evaluator::eliminate_the_weak( $problem->{id}, $new_inputs, $new_solutions, $is_dry_run );
@@ -47,7 +48,8 @@ say "found " . scalar( @$solutions );
         last if $response eq "time limit exceeded";
         last if ref($response) eq 'HASH' && $response->{status} eq 'win';
     }
+
     my $end_time = time();
     say STDERR "Took " . ($end_time - $start_time) . " seconds";
-    last;
+#    last;
 }
