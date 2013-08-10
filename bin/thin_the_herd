@@ -25,6 +25,12 @@ for my $problem ( @$problems ) {
     }
 
     my $out = BV::Parse::generate( $size, $problem->{operators} );
+
+    if ( scalar @$out > 100_000 ) {
+        say STDERR "Got " . scalar @$out . ". Too many generated programs to check ... skipping";
+        next;
+    }
+
     my ($inputs, $solutions) = @{ BV::Parse::gridify( $out ) };
     my $thinned = Evaluator::eliminate_the_weak( $problem->{id}, $inputs, $solutions, $is_dry_run );
 
