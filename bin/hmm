@@ -35,15 +35,28 @@ use Data::Printer;
 #my $combos = BV::Parse::gen_exp(3, $ops);
 #p $combos;
 
-my $out = BV::Parse::generate(6, [qw( and not shl1 shr16 )]);
+my $stime = time();
+my $out = BV::Parse::generate(8, [qw( and not shl1 shr16 )]);
+say "Generated " . scalar @$out . " possible solutions";
+say "Took " . (time() - $stime) . " seconds";
 # p $out;
 
 # exit;
 
+$stime = time();
 my ($inputs, $grid) = @{ BV::Parse::gridify($out) };
+say "Gridify key count: " . scalar keys %$grid;
+say "Took " . (time() - $stime) . " seconds";
+
+$stime = time();
+my ($inputs, $tree) = @{ BV::Parse::treeify($out) };
+say "Treeify key count: " . scalar keys %$tree;
+say "Took " . (time() - $stime) . " seconds";
+# foreach my $k (sort keys %$tree) {
+  # say "$k: " . scalar @{ $tree->{$k} };
+# }
 
 # print Dumper($grid);
-say "Key count: " . scalar keys %$grid;
 
 #foreach my $key (keys %$grid) {
   #say substr($key, 0, 40) . ": " . scalar @{ $grid->{$key} };
