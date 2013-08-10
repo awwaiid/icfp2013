@@ -5,35 +5,51 @@ use lib 'lib';
 use ICFP;
 use BV::Parse;
 use Data::Dumper;
+use Math::Int64 qw(uint64);
 
 my $parser = BV::Parse->new;
 
 use Data::Printer;
 #my $x = $parser->parse("(lambda (x_70124) (fold (shr1 (shl1 x_70124)) (and (and (if0 (or (shr1 (and (shr4 (plus 0 (shr1 1))) 0)) x_70124) 1 x_70124) x_70124) x_70124) (lambda (x_70125 x_70126) (if0 x_70125 x_70126 x_70125))))");
 # my $x = $parser->parse("(lambda (x_70124) (plus x_70124 1))");
-#p $x;
+# my $x = $parser->parse('(lambda (x) (plus 1 (fold x 0 (lambda (z y) (shr4 (shl1 (plus (shl1 x) x)))))))');
+# # my $x = $parser->parse("(lambda (x_70124) (not x_70124))");
+# p $x;
 
-#my $result = $parser->evaluate($x, 5);
-#p $result;
+# # my $result = $parser->evaluate($x, 5);
+# my $result = $parser->evaluate($x, 0x1122334455667788);
+# # p $result;
+# printf "result: 0x%016X\n", $result;
+
+# my $code = BV::Parse::compile($x);
+# say "code:\n$code";
+# my $f = eval $code;
+# # $result = $f->(5);
+# $result = $f->(0x1122334455667788);
+# printf "result: 0x%016X\n", $result;
+
+# exit;
 
 #my $ops = BV::Parse::limit_ops([qw( not shr1 )]);
 #p $ops;
 #my $combos = BV::Parse::gen_exp(3, $ops);
 #p $combos;
 
-my $out = BV::Parse::generate(7, [qw( and not shl1 shr16 )]);
-p $out;
+my $out = BV::Parse::generate(6, [qw( and not shl1 shr16 )]);
+# p $out;
+
+# exit;
 
 my ($inputs, $grid) = @{ BV::Parse::gridify($out) };
 
-print Dumper($grid);
+# print Dumper($grid);
 say "Key count: " . scalar keys %$grid;
 
-foreach my $key (keys %$grid) {
-  say substr($key, 0, 40) . ": " . scalar @{ $grid->{$key} };
-  my ($i2, $g2) = @{ BV::Parse::gridify( $grid->{$key} ) };
-  foreach my $key (keys %$g2) {
-    say "\t" . substr($key, 0, 40) . ": " . scalar @{ $g2->{$key} };
-  }
-}
+#foreach my $key (keys %$grid) {
+  #say substr($key, 0, 40) . ": " . scalar @{ $grid->{$key} };
+  # my ($i2, $g2) = @{ BV::Parse::gridify( $grid->{$key} ) };
+  # foreach my $key (keys %$g2) {
+    # say "\t" . substr($key, 0, 40) . ": " . scalar @{ $g2->{$key} };
+  # }
+#}
 
