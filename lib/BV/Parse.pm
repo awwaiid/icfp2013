@@ -27,18 +27,18 @@ method parse($str) {
 method evaluate($exp, $v) {
   $self->vars({}); # reset vars
   my $v64 = uint64($v);
-  # printf "v64: 0x%016X (%s)\n", $v64, ref($v64);
-  # say "exp: " . Dumper($exp);
-  # return $self->interp(clone($exp), $v);
-  my $out = $self->interp(clone($exp), $v64);
-  # print "interp result: " . Dumper($out);
-  # printf "interp v64: 0x%016X\n", $out;
-  # printf "interp v64 str: 0x%s\n", Math::Int64::uint64_to_hex($out);
+
+  my $out = interp(clone($exp), {}, $v64);
+
+  # my $code = compile(clone($exp));
+  # my $f = eval($code);
+  # my $out = $f->($v64);
+
   return $out;
 }
 
   $| = 1;
-method interp($exp, $v) {
+func interp($exp, $vars, $v) {
   # say "here!";
   my $op = ref($exp) eq 'ARRAY' ? shift @$exp : $exp;
   # say "interp(" . Dumper($exp) . ")";
@@ -48,23 +48,23 @@ method interp($exp, $v) {
 
     when('lambda') {
       my $varname = (shift @$exp)->[0];
-      $self->vars->{$varname} = $v;
-      return $self->interp(shift @$exp);
+      $vars->{$varname} = $v;
+      return interp(shift @$exp,$vars);
     }
 
     when('if0') {
-      my $cond = $self->interp(shift @$exp);
+      my $cond = interp(shift @$exp,$vars);
       if($cond == 0) {
-        return $self->interp( $exp->[0] );
+        return interp( $exp->[0] ,$vars);
       } else {
-        return $self->interp( $exp->[1] );
+        return interp( $exp->[1] ,$vars);
       }
     }
 
     when('fold') {
       # (fold e0 e1 (lambda (x y) e2))
-      my $e0 = $self->interp(shift @$exp);
-      my $e1 = $self->interp(shift @$exp);
+      my $e0 = interp(shift @$exp,$vars);
+      my $e1 = interp(shift @$exp,$vars);
       my $lambda = shift @$exp;
       die "lambda expected!" unless shift @$lambda eq 'lambda';
       my ($x, $y) = @{ shift @$lambda };
@@ -73,54 +73,54 @@ method interp($exp, $v) {
       for(1..8) {
         my $x_val = $e0 & 0xFF; # Grab just the rightmost byte
         $e0 = $e0 >> 8;         # Shift over to get rid of that byte
-        $self->vars->{$x} = $x_val;
-        $self->vars->{$y} = $y_val;
-        $y_val = $self->interp(clone($e2));
+        $vars->{$x} = $x_val;
+        $vars->{$y} = $y_val;
+        $y_val = interp(clone($e2),$vars);
       }
       return $y_val;
     }
 
     # Binary
     when('and') {
-      my $left = $self->interp(shift @$exp);
-      my $right = $self->interp(shift @$exp);
+      my $left = interp(shift @$exp,$vars);
+      my $right = interp(shift @$exp,$vars);
       return 0+$left & 0+$right;
     }
     when('or') {
-      my $left = $self->interp(shift @$exp);
-      my $right = $self->interp(shift @$exp);
+      my $left = interp(shift @$exp,$vars);
+      my $right = interp(shift @$exp,$vars);
       return 0+$left | 0+$right;
     }
     when('xor') {
-      my $left = $self->interp(shift @$exp);
-      my $right = $self->interp(shift @$exp);
+      my $left = interp(shift @$exp,$vars);
+      my $right = interp(shift @$exp,$vars);
       return 0+$left ^ 0+$right;
     }
     when('plus') {
-      my $left = $self->interp(shift @$exp);
-      my $right = $self->interp(shift @$exp);
-      return 0+$left + 0+$right;
+      my $left = interp(shift @$exp,$vars);
+      my $right = interp(shift @$exp,$vars);
+      return $left + $right;
     }
 
     # Unary
     when('not') {
-      my $right = $self->interp(shift @$exp);
-      return ~ (0+$right);
+      my $right = interp(shift @$exp,$vars);
+      return ~ $right;
     }
     when('shl1') {
-      my $right = $self->interp(shift @$exp);
+      my $right = interp(shift @$exp,$vars);
       return (0+$right) << 1;
     }
     when('shr1') {
-      my $right = $self->interp(shift @$exp);
+      my $right = interp(shift @$exp,$vars);
       return ($right) >> 1;
     }
     when('shr4') {
-      my $right = $self->interp(shift @$exp);
+      my $right = interp(shift @$exp,$vars);
       return (0+$right) >> 4;
     }
     when('shr16') {
-      my $right = $self->interp(shift @$exp);
+      my $right = interp(shift @$exp,$vars);
       return (0+$right) >> 16;
     }
 
@@ -129,7 +129,120 @@ method interp($exp, $v) {
     # when('1') { 1 }
     when('0') { uint64(0) }
     when('1') { uint64(1) }
-    when(/^[a-z0-9_]+$/) { $self->vars->{$op} }
+    when(/^[a-z0-9_]+$/) { $vars->{$op} }
+
+    default { die "UNKNOWN OP/VAL $op" }
+  }
+}
+
+func compile($exp) {
+  # say "here!";
+  my $op = ref($exp) eq 'ARRAY' ? shift @$exp : $exp;
+  # say "interp(" . Dumper($exp) . ")";
+  # use Carp;
+  # Carp::cluck 'hmm' unless defined $op;
+  given($op) {
+
+    when('lambda') {
+      my $varname = (shift @$exp)->[0];
+      my $body = compile(shift @$exp);
+      return qq|
+        sub {
+          my \$$varname = shift;
+          $body
+        }
+      |;
+    }
+
+    when('if0') {
+      my $cond = compile(shift @$exp);
+      my $truepart = compile(shift @$exp);
+      my $falsepart = compile(shift @$exp);
+      return qq|
+        (($cond == 0) ? ($truepart) : ($falsepart))
+      |;
+    }
+
+    when('fold') {
+      # (fold e0 e1 (lambda (y z) e2))
+      my $e0 = compile(shift @$exp);
+      my $e1 = compile(shift @$exp);
+      my $lambda = shift @$exp;
+      die "lambda expected!" unless shift @$lambda eq 'lambda';
+      my ($y_var, $z_var) = @{ shift @$lambda };
+      my $e2 = compile(shift @$lambda);
+      return qq|
+        (
+          sub {
+            my \$f = $e0;
+            my \$$z_var = $e1;
+            for(1..8) {
+              my \$$y_var = \$f & 0xFF; # Grab just the rightmost byte
+              \$f = \$f >> 8;
+              \$$z_var = $e2;
+            }
+            return \$$z_var;
+          }
+        )->()
+      |;
+    }
+
+    # Binary
+    when('and') {
+      my $left  = compile(shift @$exp);
+      my $right = compile(shift @$exp);
+      return qq|
+        (($left) & ($right))
+      |;
+    }
+    when('or') {
+      my $left  = compile(shift @$exp);
+      my $right = compile(shift @$exp);
+      return qq{
+        (($left) | ($right))
+      };
+    }
+    when('xor') {
+      my $left  = compile(shift @$exp);
+      my $right = compile(shift @$exp);
+      return qq|
+        (($left) ^ ($right))
+      |;
+    }
+    when('plus') {
+      my $left  = compile(shift @$exp);
+      my $right = compile(shift @$exp);
+      return qq|
+        (($left) + ($right))
+      |;
+    }
+
+    # Unary
+    when('not') {
+      my $right = compile(shift @$exp);
+      return qq| (~ ($right)) |;
+    }
+    when('shl1') {
+      my $right = compile(shift @$exp);
+      return qq| (($right) << 1) |;
+    }
+    when('shr1') {
+      my $right = compile(shift @$exp);
+      return qq| (($right) >> 1) |;
+    }
+    when('shr4') {
+      my $right = compile(shift @$exp);
+      return qq| (($right) >> 4) |;
+    }
+    when('shr16') {
+      my $right = compile(shift @$exp);
+      return qq| (($right) >> 16) |;
+    }
+
+    # Simple constants and vars
+    when('0') { "uint64(0)" }
+    when('1') { "uint64(1)" }
+    when(/^[a-z0-9_]+$/) { "\$$op" }
 
     default { die "UNKNOWN OP/VAL $op" }
   }
@@ -194,8 +307,8 @@ func gen_exp($max_cost, $ops) {
 
           # when('fold') {
             # # (fold e0 e1 (lambda (x y) e2))
-            # my $e0 = $self->interp(shift @$exp);
-            # my $e1 = $self->interp(shift @$exp);
+            # my $e0 = interp(shift @$exp);
+            # my $e1 = interp(shift @$exp);
             # my $lambda = shift @$exp;
             # die "lambda expected!" unless shift @$lambda eq 'lambda';
             # my ($x, $y) = @{ shift @$lambda };
@@ -206,9 +319,28 @@ func gen_exp($max_cost, $ops) {
               # $e0 = $e0 >> 8;         # Shift over to get rid of that byte
               # $self->vars->{$x} = $x_val;
               # $self->vars->{$y} = $y_val;
-              # $y_val = $self->interp(clone($e2));
+              # $y_val = interp(clone($e2));
             # }
             # return $y_val;
+          # }
+
+          # when('fold') {
+            # my $e1s = gen_exp($max_cost - 4, $ops);
+            # foreach my $e1 (@$e1s) {
+              # my $e1_cost = $e1->[0];
+              # my $e2s = gen_exp($max_cost - $e2_cost - 3, $ops);
+              # foreach my $iftrue (@$iftrues) {
+                # # my $iftrue = clone $iftrue;
+                # my $iftrue_cost = $iftrue->[0];
+                # my $iffalses = gen_exp($max_cost - $cond_cost - $iftrue_cost - 1, $ops);
+                # foreach my $iffalse (@$iffalses) {
+                  # my $iffalse_cost = $iffalse->[0];
+                  # push @results, [
+                    # (1 + $cond_cost + $iftrue_cost + $iffalse_cost),
+                    # [if0 => $cond->[1], $iftrue->[1], $iffalse->[1]]];
+                # }
+              # }
+            # }
           # }
 
           # Binary
@@ -276,13 +408,24 @@ func generate($cost, $ops) {
 use Memoize;
 use Storable qw( nfreeze );
 sub gen_exp_normalize {
-  return $_[0];
+  # return $_[0];
   # say "dump: " . Dumper([@_]);
   # my $f = Dumper([@_]);
+  my $f = nfreeze([@_]);
+  # my $f = "$_[0]";
+  # my $f = render($_[0]);# . ",$_[1]";
   # say STDERR "norm: $f";
-  # return $f;
+  return $f;
 }
 # memoize('gen_exp',
+  # NORMALIZER => 'gen_exp_normalize',
+# );
+
+# memoize('interp',
+  # NORMALIZER => 'gen_exp_normalize',
+# );
+
+# memoize('compile',
   # NORMALIZER => 'gen_exp_normalize',
 # );
 
