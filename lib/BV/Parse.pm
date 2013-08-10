@@ -473,7 +473,7 @@ func treeify($progs) {
   return [\@inputs, treeify_helper(\@progs, [@inputs])];
 }
 
-my $c = 0;
+my $treec = 0;
 func treeify_helper($progs, $inputs) {
   return $progs if ! @$inputs;
   # say "Inputs: @$inputs";
@@ -483,7 +483,7 @@ func treeify_helper($progs, $inputs) {
   foreach my $program (@$progs) {
     my $parsed_program = $program->[0];
     my $result = $parser->evaluate($parsed_program, $input);
-    print "." unless ++$c % 1000;
+    print "." unless ++$treec % 1000;
     $result = sprintf "0x%016X", $result;
     $tree->{$result} //= [];
     push $tree->{$result}, $program;
