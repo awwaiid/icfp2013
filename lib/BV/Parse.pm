@@ -160,7 +160,9 @@ func limit_ops($ops_list) {
 #   min_cost2 => [ opD opE opF ],
 # }
 
+my $c = 0;
 func gen_exp($max_cost, $ops) {
+  print "." unless $c++ % 10000;
   # say "gen_exp($max_cost)";
   my @results;
   push @results, [1, 0];
@@ -259,7 +261,9 @@ func render($exp) {
 
 func generate($cost, $ops) {
   my $ops_struct = limit_ops($ops);
+  print "Generating solutions";
   my $combos = gen_exp($cost - 1, $ops_struct);
+  print "\n";
   # say "Combos: " . Dumper($combos);
   return [
     map { render(['lambda (x)', $_ ]) }
@@ -291,7 +295,10 @@ func gridify($progs) {
 
   my $parser = BV::Parse->new;
   my $grid = {};
+  my $c = 0;
+  print "Building grid\n";
   foreach my $program (@$progs) {
+    print "$c/".(scalar(@$progs))."\r" unless $c++ % 100;
     my $parsed_program = $parser->parse($program);
     my @results = map { $parser->evaluate($parsed_program, $_) } @inputs;
     @results = map { sprintf "0x%016X", $_ } @results;
@@ -299,6 +306,7 @@ func gridify($progs) {
     $grid->{$r} //= [];
     push $grid->{$r}, $program;
   }
+  print "\n";
   @inputs = map { sprintf "0x%016X", $_ } @inputs;
   return [\@inputs, $grid];
 }
