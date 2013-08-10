@@ -263,7 +263,7 @@ my $all_ops = {
   2 => [qw( not shl1 shr1 shr4 shr16 )],
   3 => [qw( and or xor plus )],
   4 => [qw( if0 )],
-  5 => [qw( fold )],
+  5 => [qw( fold tfold )],
 };
 
 func limit_ops($ops_list) {
@@ -284,6 +284,8 @@ func limit_ops($ops_list) {
 # }
 
 my $c = 0;
+my $is_fold = 0;
+my $is_tfold = 0;
 func gen_exp($max_cost, $ops) {
   print "." unless $c++ % 10000;
   # say "gen_exp($max_cost)";
@@ -291,6 +293,8 @@ func gen_exp($max_cost, $ops) {
   push @results, [1, 0];
   push @results, [1, 1];
   push @results, [1, 'x'];
+  push @results, [1, 'y'] if $is_fold || $is_tfold;
+  push @results, [1, 'z'] if $is_fold;
   foreach my $cost (keys %$ops) {
     if($cost <= $max_cost) {
       foreach my $op (@{ $ops->{$cost} }) {
@@ -334,24 +338,49 @@ func gen_exp($max_cost, $ops) {
             # return $y_val;
           # }
 
-          # when('fold') {
-            # my $e1s = gen_exp($max_cost - 4, $ops);
-            # foreach my $e1 (@$e1s) {
-              # my $e1_cost = $e1->[0];
-              # my $e2s = gen_exp($max_cost - $e2_cost - 3, $ops);
-              # foreach my $iftrue (@$iftrues) {
-                # # my $iftrue = clone $iftrue;
-                # my $iftrue_cost = $iftrue->[0];
-                # my $iffalses = gen_exp($max_cost - $cond_cost - $iftrue_cost - 1, $ops);
-                # foreach my $iffalse (@$iffalses) {
-                  # my $iffalse_cost = $iffalse->[0];
-                  # push @results, [
-                    # (1 + $cond_cost + $iftrue_cost + $iffalse_cost),
-                    # [if0 => $cond->[1], $iftrue->[1], $iffalse->[1]]];
-                # }
-              # }
-            # }
-          # }
+          # (fold e0 e1 (lambda (y z) e2))
+          when('fold') {
+            my $e0s = gen_exp($max_cost - 4, $ops);
+            foreach my $e0 (@$e0s) {
+              my $e0_cost = $e0->[0];
+              my $e1s = gen_exp($max_cost - $e0_cost - 3, $ops);
+              foreach my $e1 (@$e1s) {
+                # my $iftrue = clone $iftrue;
+                my $e1_cost = $e1->[0];
+                $is_fold = 1;
+                my $e2s = gen_exp($max_cost - $e0_cost - $e1_cost - 2, $ops);
+                $is_fold = 0;
+                foreach my $e2 (@$e2s) {
+                  my $e2_cost = $e2->[0];
+                  push @results, [
+                    (2 + $e0_cost + $e1_cost + $e2_cost),
+                    [fold => $e0->[1], $e1->[1], [ 'lambda', '(y z)', $e2->[1]]]];
+                }
+              }
+            }
+          }
+
+          # (tfold x 0 (lambda (y z) e2))
+          when('tfold') {
+            my $e0s = [[1, 'x']];
+            foreach my $e0 (@$e0s) {
+              my $e0_cost = $e0->[0];
+              my $e1s = [[1, 0]];
+              foreach my $e1 (@$e1s) {
+                # my $iftrue = clone $iftrue;
+                my $e1_cost = $e1->[0];
+                $is_tfold = 1;
+                my $e2s = gen_exp($max_cost - $e0_cost - $e1_cost - 2, $ops);
+                $is_tfold = 0;
+                foreach my $e2 (@$e2s) {
+                  my $e2_cost = $e2->[0];
+                  push @results, [
+                    (2 + $e0_cost + $e1_cost + $e2_cost),
+                    [tfold => $e0->[1], $e1->[1],[ 'lambda', '(x y)',  $e2->[1]]]];
+                }
+              }
+            }
+          }
 
           # Binary
           when(/and|or|xor|plus/) {
@@ -501,6 +530,6 @@ func treeify_helper($progs, $inputs) {
   }
   return $tree;
 }
-  
+
 1;
 
