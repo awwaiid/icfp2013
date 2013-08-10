@@ -54,3 +54,12 @@ for $n (1..40) { print "$n: " . `grep 'size":$n,' myproblems.json | wc -l` }
 29: 60
 30: 60
 
+
+-----------------------------------
+
+2013.08.09.19.51
+We currently have 60 points by doing brute-force. Now we're working on bucketing solutions based on 256 random inputs, using the 'eval' API to get the outputs and then narrowing down our solutions to just the ones that match.
+
+2013.08.10.12.15
+At Bourbon. Researching SMT to see if that'll help ... bucketing stuff has helped and we are working on solving some of size-9 and 10 problems.
+
