@@ -499,7 +499,9 @@ func treeify($progs) {
   push @inputs, map { uint64($_) } -4..5;
   my $parser = BV::Parse->new;
   my @progs = map { [ $parser->parse($_), $_ ] } @$progs;
-  return [\@inputs, treeify_helper(\@progs, [@inputs])];
+  my $tree = treeify_helper(\@progs, [@inputs]);
+  @inputs = map { sprintf "0x%016X", $_ } @inputs;
+  return [\@inputs, $tree];
 }
 
 my $treec = 0;
@@ -512,7 +514,7 @@ func treeify_helper($progs, $inputs) {
   foreach my $program (@$progs) {
     my $parsed_program = $program->[0];
     my $result = $parser->evaluate($parsed_program, $input);
-    print "." unless ++$treec % 1000;
+    print "." unless ++$treec % 10000;
     $result = sprintf "0x%016X", $result;
     $tree->{$result} //= [];
     push $tree->{$result}, $program;
@@ -531,5 +533,13 @@ func treeify_helper($progs, $inputs) {
   return $tree;
 }
 
+func treeify_lookup($tree, $outputs) {
+  while(ref($tree) eq 'HASH') {
+    $tree = $tree->{ shift @$outputs };
+  }
+  $tree = [ map { $_->[1] } @$tree ];
+  return $tree;
+}
+ 
 1;
 

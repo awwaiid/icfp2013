@@ -12,7 +12,11 @@ my $size = shift @ARGV;
 
 my $problems = API::get_pending_problems();
 
-# $problems = [{ id => "0B3abjLBcQ4fGzA2LecYHWSQ", size => 6, operators => ["if0", "shl1",] } ];
+$problems = [{
+  id => "zmzOvRFOoaR9BkAIoHMudBYA",
+  size => 9,
+  operators => [qw( if0 not shl1 shr1 shr16 )]
+}];
 
 my $is_dry_run = 0;
 
@@ -32,6 +36,7 @@ for my $problem ( @$problems ) {
     }
 
     my ($inputs, $solutions) = @{ BV::Parse::gridify( $out ) };
+    # my ($inputs, $solutions) = @{ BV::Parse::treeify( $out ) };
     my $thinned = Evaluator::eliminate_the_weak( $problem->{id}, $inputs, $solutions, $is_dry_run );
 
 #    if (scalar( @$thinned ) > 90) {
