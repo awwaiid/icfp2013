@@ -10,17 +10,27 @@ use Data::Printer;
 
 my $size = shift @ARGV;
 
-my $problems;# = API::get_pending_problems();
+my $problems = API::get_pending_problems();
 
-$problems = [{ id => "Z8xOhM78xUJsUQMkRvjh3S3u", size => 6, operators => ["not", "shl1", "shr16"] } ];
+# $problems = [{ id => "6vA4h00XXD4P3d2OfJAMAbR0", size => 8, operators => ["or", "shl1", "xor"] } ];
 
-my $is_dry_run = 1;
+my $is_dry_run = 0;
 
 for my $problem ( @$problems ) {
+p($problem);
+if ( grep { $_ =~ /fold/ } @{ $problem->{operators} } ) {
+    say STDERR "oper has fold ... skipping";
+    next;
+}
     my $out = BV::Parse::generate( $size, $problem->{operators} );
-    my ($inputs, $solutions) = BV::Parse::gridify( $out );
+    my ($inputs, $solutions) = @{ BV::Parse::gridify( $out ) };
+say "found " . scalar( @$solutions );
     my $thinned = Evaluator::eliminate_the_weak( $problem->{id}, $inputs, $solutions, $is_dry_run );
 
+    if (scalar( @$thinned ) > 90) {
+        say STDERR "generated " . scalar( @$thinned ) . " functions - > 90 ... skipping";
+        next;
+    }
 #    while ( scalar( @$thinned ) > 90 ) {
 #        my ($new_inputs, $new_solutions) = BV::Parse::get_solutions( $size, $problem->{operators}, $thinned );
 #        my $thinned = Evaluator::eliminate_the_weak( $problem->{id}, $new_inputs, $new_solutions, $is_dry_run );
@@ -39,5 +49,5 @@ for my $problem ( @$problems ) {
     }
     my $end_time = time();
     say STDERR "Took " . ($end_time - $start_time) . " seconds";
-#    last;
+    last;
 }
