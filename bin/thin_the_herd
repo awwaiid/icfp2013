@@ -26,7 +26,7 @@ for my $problem ( @$problems ) {
 
     my $out = BV::Parse::generate( $size, $problem->{operators} );
 
-    if ( scalar @$out > 100_000 ) {
+    if ( scalar @$out > 125000 ) {
         say STDERR "Got " . scalar @$out . ". Too many generated programs to check ... skipping";
         next;
     }
