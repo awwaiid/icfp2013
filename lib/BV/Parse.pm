@@ -1,5 +1,10 @@
 package BV::Parse;
 
+# use v5.14;
+# use Moo;
+# use Method::Signatures::Simple;
+
+no warnings 'recursion';
 use Data::Dumper;
 use Clone qw(clone);
 use integer;
@@ -38,6 +43,8 @@ method evaluate($exp, $v) {
 }
 
   $| = 1;
+  my $int64_zero = uint64(0);
+  my $int64_one  = uint64(1);
 func interp($exp, $vars, $v) {
   # say "here!";
   my $op = ref($exp) eq 'ARRAY' ? shift @$exp : $exp;
@@ -46,10 +53,56 @@ func interp($exp, $vars, $v) {
   # Carp::cluck 'hmm' unless defined $op;
   given($op) {
 
-    when('lambda') {
-      my $varname = (shift @$exp)->[0];
-      $vars->{$varname} = $v;
-      return interp(shift @$exp,$vars);
+    # Simple constants and vars
+    # when('0') { uint64(0) }
+    # when('1') { uint64(1) }
+    # when('0') { 0 }
+    # when('1') { 1 }
+    when('0') { $int64_zero }
+    when('1') { $int64_one  }
+
+    # Unary
+    when('not') {
+      my $right = interp(shift @$exp,$vars);
+      return ~ $right;
+    }
+    when('shl1') {
+      my $right = interp(shift @$exp,$vars);
+      return $right << 1;
+    }
+    when('shr1') {
+      my $right = interp(shift @$exp,$vars);
+      return $right >> 1;
+    }
+    when('shr4') {
+      my $right = interp(shift @$exp,$vars);
+      return $right >> 4;
+    }
+    when('shr16') {
+      my $right = interp(shift @$exp,$vars);
+      return $right >> 16;
+    }
+
+    # Binary
+    when('and') {
+      my $left = interp(shift @$exp,$vars);
+      my $right = interp(shift @$exp,$vars);
+      return $left & $right;
+    }
+    when('or') {
+      my $left = interp(shift @$exp,$vars);
+      my $right = interp(shift @$exp,$vars);
+      return $left | $right;
+    }
+    when('xor') {
+      my $left = interp(shift @$exp,$vars);
+      my $right = interp(shift @$exp,$vars);
+      return $left ^ $right;
+    }
+    when('plus') {
+      my $left = interp(shift @$exp,$vars);
+      my $right = interp(shift @$exp,$vars);
+      return $left + $right;
     }
 
     when('if0') {
@@ -80,55 +133,12 @@ func interp($exp, $vars, $v) {
       return $y_val;
     }
 
-    # Binary
-    when('and') {
-      my $left = interp(shift @$exp,$vars);
-      my $right = interp(shift @$exp,$vars);
-      return 0+$left & 0+$right;
-    }
-    when('or') {
-      my $left = interp(shift @$exp,$vars);
-      my $right = interp(shift @$exp,$vars);
-      return 0+$left | 0+$right;
-    }
-    when('xor') {
-      my $left = interp(shift @$exp,$vars);
-      my $right = interp(shift @$exp,$vars);
-      return 0+$left ^ 0+$right;
-    }
-    when('plus') {
-      my $left = interp(shift @$exp,$vars);
-      my $right = interp(shift @$exp,$vars);
-      return $left + $right;
+    when('lambda') {
+      my $varname = (shift @$exp)->[0];
+      $vars->{$varname} = $v;
+      return interp(shift @$exp,$vars);
     }
 
-    # Unary
-    when('not') {
-      my $right = interp(shift @$exp,$vars);
-      return ~ $right;
-    }
-    when('shl1') {
-      my $right = interp(shift @$exp,$vars);
-      return (0+$right) << 1;
-    }
-    when('shr1') {
-      my $right = interp(shift @$exp,$vars);
-      return ($right) >> 1;
-    }
-    when('shr4') {
-      my $right = interp(shift @$exp,$vars);
-      return (0+$right) >> 4;
-    }
-    when('shr16') {
-      my $right = interp(shift @$exp,$vars);
-      return (0+$right) >> 16;
-    }
-
-    # Simple constants and vars
-    # when('0') { 0 }
-    # when('1') { 1 }
-    when('0') { uint64(0) }
-    when('1') { uint64(1) }
     when(/^[a-z0-9_]+$/) { $vars->{$op} }
 
     default { die "UNKNOWN OP/VAL $op" }
@@ -454,5 +464,43 @@ func gridify($progs) {
   return [\@inputs, $grid];
 }
 
+func treeify($progs) {
+  print "Building tree";
+  my @inputs = map { uint64_rand() } 1..246;
+  push @inputs, map { uint64($_) } -4..5;
+  my $parser = BV::Parse->new;
+  my @progs = map { [ $parser->parse($_), $_ ] } @$progs;
+  return [\@inputs, treeify_helper(\@progs, [@inputs])];
+}
+
+my $c = 0;
+func treeify_helper($progs, $inputs) {
+  return $progs if ! @$inputs;
+  # say "Inputs: @$inputs";
+  my $parser = BV::Parse->new;
+  my $input = shift @$inputs;
+  my $tree = {};
+  foreach my $program (@$progs) {
+    my $parsed_program = $program->[0];
+    my $result = $parser->evaluate($parsed_program, $input);
+    print "." unless ++$c % 1000;
+    $result = sprintf "0x%016X", $result;
+    $tree->{$result} //= [];
+    push $tree->{$result}, $program;
+  }
+
+  # say "Treeify key count: " . scalar keys %$tree;
+  # foreach my $k (sort keys %$tree) {
+    # say "$k: " . scalar @{ $tree->{$k} };
+  # }
+
+  foreach my $output (keys %$tree) {
+    if(scalar @{$tree->{$output}} > 50) {
+      $tree->{$output} = treeify_helper($tree->{$output}, [ @$inputs ]);
+    }
+  }
+  return $tree;
+}
+  
 1;
 
