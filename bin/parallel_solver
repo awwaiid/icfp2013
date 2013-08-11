@@ -45,8 +45,8 @@ for my $problem ( @$problems ) {
 
     $pm->start and next;
 
-    say "local host call solve_one on $id $size $oper_lost";
-    print `ssh localhost 'bash -lc "source ~/perl5/perlbrew/etc/bashrc ; cd projects/icfp2013 ; nice bin/solve_one $id $size $oper_list > log/run_$id.log 2>&1"`;
+    say "local host call solve_one on $id $size $oper_list";
+    print `ssh localhost 'bash -lc "source ~/perl5/perlbrew/etc/bashrc ; cd projects/icfp2013 ; nice bin/solve_one $id $size $oper_list > log/run_$id.log 2>&1"'`;
     say "solving $id done.";
     $pm->finish;
 }
