@@ -499,6 +499,7 @@ func ocaml_eval($program, @inputs) {
     push @results, <$interp_out>;
     # say "Got @results";
   }
+  chomp @results;
   return @results;
 }
 
