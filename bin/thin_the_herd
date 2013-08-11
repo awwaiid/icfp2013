@@ -23,10 +23,6 @@ my $is_dry_run = 0;
 for my $problem ( @$problems ) {
     next unless $problem->{size} == $size;
 #p($problem);
-    #  if ( grep { $_ =~ /fold/ } @{ $problem->{operators} } ) {
-        #  say STDERR "oper has fold ... skipping";
-        #  next;
-    #  }
 
     my $out;
     eval { $out = BV::Parse::generate( $size, $problem->{operators} ) };
