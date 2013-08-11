@@ -288,6 +288,7 @@ my $is_fold = 0;
 my $is_tfold = 0;
 func gen_exp($max_cost, $ops) {
   print "." unless $c++ % 10000;
+die "too many results" if $c > 135000;
   # say "gen_exp($max_cost)";
   my @results;
   push @results, [1, 0];
@@ -376,7 +377,7 @@ func gen_exp($max_cost, $ops) {
                   my $e2_cost = $e2->[0];
                   push @results, [
                     (2 + $e0_cost + $e1_cost + $e2_cost),
-                    [tfold => $e0->[1], $e1->[1],[ 'lambda', '(x y)',  $e2->[1]]]];
+                    [fold => $e0->[1], $e1->[1],[ 'lambda', '(x y)',  $e2->[1]]]];
                 }
               }
             }
@@ -432,6 +433,7 @@ func render($exp) {
 
 func generate($cost, $ops) {
   my $ops_struct = limit_ops($ops);
+  $c = 0;
   print "Generating solutions";
   my $combos = gen_exp($cost - 1, $ops_struct);
   print "\n";
@@ -540,6 +542,6 @@ func treeify_lookup($tree, $outputs) {
   $tree = [ map { $_->[1] } @$tree ];
   return $tree;
 }
- 
+
 1;
 

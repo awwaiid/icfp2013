@@ -12,25 +12,30 @@ my $size = shift @ARGV;
 
 my $problems = API::get_pending_problems();
 
-$problems = [{
-  id => "zmzOvRFOoaR9BkAIoHMudBYA",
-  size => 9,
-  operators => [qw( if0 not shl1 shr1 shr16 )]
-}];
+#  $problems = [{
+  #  id => "z0a2IwBOuLowNP61JiIqA5zQ",
+  #  size => 9,
+  #  operators => [qw( shr4 tfold xor )]
+#  }];
 
 my $is_dry_run = 0;
 
 for my $problem ( @$problems ) {
     next unless $problem->{size} == $size;
 #p($problem);
-    if ( grep { $_ =~ /fold/ } @{ $problem->{operators} } ) {
-        say STDERR "oper has fold ... skipping";
+    #  if ( grep { $_ =~ /fold/ } @{ $problem->{operators} } ) {
+        #  say STDERR "oper has fold ... skipping";
+        #  next;
+    #  }
+
+    my $out;
+    eval { $out = BV::Parse::generate( $size, $problem->{operators} ) };
+
+    if ( $@ ) {
+        say STDERR "\ngenerate died: $@";
         next;
     }
-
-    my $out = BV::Parse::generate( $size, $problem->{operators} );
-
-    if ( scalar @$out > 125000 ) {
+    if ( scalar @$out > 129000 ) {
         say STDERR "Got " . scalar @$out . ". Too many generated programs to check ... skipping";
         next;
     }
@@ -62,5 +67,5 @@ for my $problem ( @$problems ) {
 
     my $end_time = time();
     say STDERR "Took " . ($end_time - $start_time) . " seconds";
-#    last;
+    #  last;
 }
