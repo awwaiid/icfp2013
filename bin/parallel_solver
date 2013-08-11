@@ -1,0 +1,56 @@
+#!/usr/bin/env perl
+
+use v5.14;
+use lib 'lib';
+use ICFP;
+use BV::Parse;
+use API;
+use Evaluator;
+use Parallel::ForkManager;
+use Data::Printer;
+
+my $problems = API::get_pending_problems();
+my $pm = Parallel::ForkManager->new( 2 );
+#  my $pm = Parallel::ForkManager->new(scalar @machines);
+
+$problems = [
+    {
+        id        => "aSURelJ3AswfGoufBiVGrB3R",
+        size      => 4,
+        operators => [qw( and )]
+    },
+    {
+        id        => "AJXB68zXcHPjLCQUAJIvKJjb",
+        size      => 4,
+        operators => [qw( shr16 shr4 )]
+    },
+    {
+        id        => "uV6c9k746ypkMR7iZBErmYo8",
+        size      => 4,
+        operators => [qw( not shr16 )]
+    },
+    {
+        id        => "8uAVhUs9sY2kEBG38VmJ09nS",
+        size      => 4,
+        operators => [qw( or )]
+    },
+];
+
+
+for my $problem ( @$problems ) {
+    #p($problem);
+    my $id = $problem->{id};
+    my $size = $problem->{size};
+    my $oper_list = join(' ', @{ $problem->{operators} });
+
+    $pm->start and next;
+
+    say "local host call solve_one on $id $size $oper_lost";
+    print `ssh localhost 'bash -lc "source ~/perl5/perlbrew/etc/bashrc ; cd projects/icfp2013 ; nice bin/solve_one $id $size $oper_list > log/run_$id.log 2>&1"`;
+    say "solving $id done.";
+    $pm->finish;
+}
+
+
+$pm->wait_all_children;
+

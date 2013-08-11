@@ -1,0 +1,900 @@
+guessing for id FPxf9N3dIBAAnEjQX9q6cdhM and program (lambda (x) (xor 0 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id FPxf9N3dIBAAnEjQX9q6cdhM and program (lambda (x) (xor 0 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id FPxf9N3dIBAAnEjQX9q6cdhM and program (lambda (x) (xor 0 x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id FPxf9N3dIBAAnEjQX9q6cdhM and program (lambda (x) (xor 1 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id FPxf9N3dIBAAnEjQX9q6cdhM and program (lambda (x) (xor 1 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id FPxf9N3dIBAAnEjQX9q6cdhM and program (lambda (x) (xor 1 x))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id KRFaPiaJgmqh9dWSa37HWvWA and program (lambda (x) (or 0 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id KRFaPiaJgmqh9dWSa37HWvWA and program (lambda (x) (or 0 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id KRFaPiaJgmqh9dWSa37HWvWA and program (lambda (x) (or 0 x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id KRFaPiaJgmqh9dWSa37HWvWA and program (lambda (x) (or 1 0))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id KRFaPiaJgmqh9dWSa37HWvWA and program (lambda (x) (or 1 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id KRFaPiaJgmqh9dWSa37HWvWA and program (lambda (x) (or 1 x))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id NIhG4th8l4Zqo9FS2S2A4uFY and program (lambda (x) (shr4 (shr4 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFF00",
+        [1] "0x00FFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id NIhG4th8l4Zqo9FS2S2A4uFY and program (lambda (x) (shr4 (shr4 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFF00",
+        [1] "0x00FFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id NIhG4th8l4Zqo9FS2S2A4uFY and program (lambda (x) (shr4 (shr4 x)))
+timed out - sleeping
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id OWj2MCcEOkFwZ0qgX70MWAM5 and program (lambda (x) (xor 0 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id OWj2MCcEOkFwZ0qgX70MWAM5 and program (lambda (x) (xor 0 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id OWj2MCcEOkFwZ0qgX70MWAM5 and program (lambda (x) (xor 0 x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id OWj2MCcEOkFwZ0qgX70MWAM5 and program (lambda (x) (xor 1 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id OWj2MCcEOkFwZ0qgX70MWAM5 and program (lambda (x) (xor 1 1))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id OWj2MCcEOkFwZ0qgX70MWAM5 and program (lambda (x) (xor 1 x))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id PvsZLEop875UuPotLRsvRsET and program (lambda (x) (and 0 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id PvsZLEop875UuPotLRsvRsET and program (lambda (x) (and 0 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id PvsZLEop875UuPotLRsvRsET and program (lambda (x) (and 0 x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id PvsZLEop875UuPotLRsvRsET and program (lambda (x) (and 1 0))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id PvsZLEop875UuPotLRsvRsET and program (lambda (x) (and 1 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id PvsZLEop875UuPotLRsvRsET and program (lambda (x) (and 1 x))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id SXcNa5LcxVlB42ZwPSICBpRr and program (lambda (x) (or 0 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id SXcNa5LcxVlB42ZwPSICBpRr and program (lambda (x) (or 0 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id SXcNa5LcxVlB42ZwPSICBpRr and program (lambda (x) (or 0 x))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id SXcNa5LcxVlB42ZwPSICBpRr and program (lambda (x) (or 1 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id SXcNa5LcxVlB42ZwPSICBpRr and program (lambda (x) (or 1 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id SXcNa5LcxVlB42ZwPSICBpRr and program (lambda (x) (or 1 x))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id TEqKkG1oGk8flAdgj7dblJ4H and program (lambda (x) (xor 0 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id TEqKkG1oGk8flAdgj7dblJ4H and program (lambda (x) (xor 0 1))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id TEqKkG1oGk8flAdgj7dblJ4H and program (lambda (x) (xor 0 x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id TEqKkG1oGk8flAdgj7dblJ4H and program (lambda (x) (xor 1 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id TEqKkG1oGk8flAdgj7dblJ4H and program (lambda (x) (xor 1 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id TEqKkG1oGk8flAdgj7dblJ4H and program (lambda (x) (xor 1 x))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id UkMtoVF5prXdhTSRd73U9K3q and program (lambda (x) (xor 0 0))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id UkMtoVF5prXdhTSRd73U9K3q and program (lambda (x) (xor 0 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id UkMtoVF5prXdhTSRd73U9K3q and program (lambda (x) (xor 0 x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id UkMtoVF5prXdhTSRd73U9K3q and program (lambda (x) (xor 1 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id UkMtoVF5prXdhTSRd73U9K3q and program (lambda (x) (xor 1 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id UkMtoVF5prXdhTSRd73U9K3q and program (lambda (x) (xor 1 x))
+timed out - sleeping
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id YwzWEr0n8X1kCw46ZgxmduAd and program (lambda (x) (shr4 (shr4 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFF00000",
+        [1] "0x00000FFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id YwzWEr0n8X1kCw46ZgxmduAd and program (lambda (x) (shr4 (shr4 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFF00000",
+        [1] "0x00000FFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id YwzWEr0n8X1kCw46ZgxmduAd and program (lambda (x) (shr4 (shr4 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x0000080000000000",
+        [2] "0x0080000000000000"
+    ]
+}
+guessing for id YwzWEr0n8X1kCw46ZgxmduAd and program (lambda (x) (shr4 (shr16 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFF00000",
+        [1] "0x00000FFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id YwzWEr0n8X1kCw46ZgxmduAd and program (lambda (x) (shr4 (shr16 1)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFF00000",
+        [1] "0x00000FFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id YwzWEr0n8X1kCw46ZgxmduAd and program (lambda (x) (shr4 (shr16 x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id alBosRMdevekKeqnwxv5LyxE and program (lambda (x) (and 0 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id alBosRMdevekKeqnwxv5LyxE and program (lambda (x) (and 0 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id alBosRMdevekKeqnwxv5LyxE and program (lambda (x) (and 0 x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id alBosRMdevekKeqnwxv5LyxE and program (lambda (x) (and 1 0))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id alBosRMdevekKeqnwxv5LyxE and program (lambda (x) (and 1 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id alBosRMdevekKeqnwxv5LyxE and program (lambda (x) (and 1 x))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id fjphmBvzpsMZk9QrAnKMeIAy and program (lambda (x) (or 0 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id fjphmBvzpsMZk9QrAnKMeIAy and program (lambda (x) (or 0 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id fjphmBvzpsMZk9QrAnKMeIAy and program (lambda (x) (or 0 x))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id fjphmBvzpsMZk9QrAnKMeIAy and program (lambda (x) (or 1 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id fjphmBvzpsMZk9QrAnKMeIAy and program (lambda (x) (or 1 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id fjphmBvzpsMZk9QrAnKMeIAy and program (lambda (x) (or 1 x))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id frayvajM0PsM5HfuaA2ldYnu and program (lambda (x) (xor 0 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id frayvajM0PsM5HfuaA2ldYnu and program (lambda (x) (xor 0 1))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id frayvajM0PsM5HfuaA2ldYnu and program (lambda (x) (xor 0 x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id frayvajM0PsM5HfuaA2ldYnu and program (lambda (x) (xor 1 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id frayvajM0PsM5HfuaA2ldYnu and program (lambda (x) (xor 1 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id frayvajM0PsM5HfuaA2ldYnu and program (lambda (x) (xor 1 x))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id h1zHpoq9ABuSBt4CI3Ar05PZ and program (lambda (x) (shr16 (shr16 0)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFF00000000",
+        [1] "0x00000000FFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id h1zHpoq9ABuSBt4CI3Ar05PZ and program (lambda (x) (shr16 (shr16 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFF00000000",
+        [1] "0x00000000FFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id h1zHpoq9ABuSBt4CI3Ar05PZ and program (lambda (x) (shr16 (shr16 x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id j1CVgBIxhlaU4hU0LdNV8gqu and program (lambda (x) (shr1 (shr1 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFC",
+        [1] "0x3FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id j1CVgBIxhlaU4hU0LdNV8gqu and program (lambda (x) (shr1 (shr1 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFC",
+        [1] "0x3FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id j1CVgBIxhlaU4hU0LdNV8gqu and program (lambda (x) (shr1 (shr1 x)))
+timed out - sleeping
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id ktoaIWq3xVPnAFx9by1mH4sG and program (lambda (x) (xor 0 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id ktoaIWq3xVPnAFx9by1mH4sG and program (lambda (x) (xor 0 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id ktoaIWq3xVPnAFx9by1mH4sG and program (lambda (x) (xor 0 x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id ktoaIWq3xVPnAFx9by1mH4sG and program (lambda (x) (xor 1 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id ktoaIWq3xVPnAFx9by1mH4sG and program (lambda (x) (xor 1 1))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0800000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id ktoaIWq3xVPnAFx9by1mH4sG and program (lambda (x) (xor 1 x))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id ttBCloiBnjsG94vg010EWwtp and program (lambda (x) (shr16 (shr16 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFF00000000",
+        [1] "0x00000000FFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id ttBCloiBnjsG94vg010EWwtp and program (lambda (x) (shr16 (shr16 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFF00000000",
+        [1] "0x00000000FFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id ttBCloiBnjsG94vg010EWwtp and program (lambda (x) (shr16 (shr16 x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id z6J2Bv1nOJXsUYP8dvnkFW3j and program (lambda (x) (and 0 0))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id z6J2Bv1nOJXsUYP8dvnkFW3j and program (lambda (x) (and 0 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id z6J2Bv1nOJXsUYP8dvnkFW3j and program (lambda (x) (and 0 x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id z6J2Bv1nOJXsUYP8dvnkFW3j and program (lambda (x) (and 1 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id z6J2Bv1nOJXsUYP8dvnkFW3j and program (lambda (x) (and 1 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id z6J2Bv1nOJXsUYP8dvnkFW3j and program (lambda (x) (and 1 x))
+timed out - sleeping
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+guessing for id zNGE3YRSWpBJrD8VZOcoTuLQ and program (lambda (x) (shl1 (shl1 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFF0",
+        [1] "0x1FFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id zNGE3YRSWpBJrD8VZOcoTuLQ and program (lambda (x) (shl1 (shl1 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFD0",
+        [1] "0x1FFFFFFFFFFFFFFA",
+        [2] "0x0000000000000004"
+    ]
+}
+guessing for id zNGE3YRSWpBJrD8VZOcoTuLQ and program (lambda (x) (shl1 (shl1 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x2000000000000000",
+        [1] "0x0400000000000000",
+        [2] "0x8000000000000000"
+    ]
+}
+guessing for id zNGE3YRSWpBJrD8VZOcoTuLQ and program (lambda (x) (shl1 (shr4 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFF0",
+        [1] "0x1FFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id zNGE3YRSWpBJrD8VZOcoTuLQ and program (lambda (x) (shl1 (shr4 1)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFF0",
+        [1] "0x1FFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id zNGE3YRSWpBJrD8VZOcoTuLQ and program (lambda (x) (shl1 (shr4 x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}

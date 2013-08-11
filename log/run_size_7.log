@@ -1,0 +1,229 @@
+Trying 16 functions
+guessing for id 4T3rAiAAOEwU65d2bH4YpAN3 and program (lambda (x) (plus 0 (plus 1 (shl1 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 4 seconds
+Trying 28 functions
+guessing for id 4yOsfGMmaApqKM9OfhbTgD2n and program (lambda (x) (or 0 (or x (shr16 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+generated 116 functions - > 90 ... skipping
+Trying 36 functions
+guessing for id AqzmBQmwparC843WCBqK3Rcv and program (lambda (x) (or 0 (or x (shr16 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 8 functions
+guessing for id BLsLjApSulffiygyi3svBeoH and program (lambda (x) (and x (xor x (shr4 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 116 functions
+guessing for id Ap72f2ZA5FW8686K9k89Uemy and program (lambda (x) (or 0 (or 0 (not x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 2 functions
+guessing for id BzAZMfKrdQwB02qEdqOMlZwy and program (lambda (x) (and x (not (shr16 (shl1 x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 24 functions
+guessing for id CJZoBXTYK0xrBYvl7aNIuSFu and program (lambda (x) (plus 0 (plus x (shl1 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 50 functions
+guessing for id D83ZB7vpaCKSLZgMBxhTHvt6 and program (lambda (x) (plus 0 (plus 0 (shr16 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 42 functions
+guessing for id EAhSxhAyeYUEWZ4HUBB6ccBB and program (lambda (x) (xor 0 (plus x (not 1))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 6 seconds
+Trying 10 functions
+guessing for id M6Iqpuj5JO0VDVzhJqIE2ann and program (lambda (x) (xor 1 (and x (not 1))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 1 seconds
+Trying 4 functions
+guessing for id TVGh6xUexKlO7sX2AlLphb11 and program (lambda (x) (plus x (and x (shr4 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 4 functions
+guessing for id ZN7ARSLecZQkbegkjmnry7il and program (lambda (x) (plus 1 (or x (shl1 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 36 functions
+guessing for id aOZ1Dw1aFzP7JKAbfDmGPCpp and program (lambda (x) (xor 0 (xor x (shr1 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 116 functions
+guessing for id fWppabsP8pizfqBHTZNTgRko and program (lambda (x) (xor 0 (xor 0 (shl1 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 16 functions
+guessing for id hZ9Je9ARVWHEyYKSspEi29JN and program (lambda (x) (plus 0 (plus 1 (shl1 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 187 functions
+guessing for id hpQnlFgpiv7UIhp0EaZCXGxA and program (lambda (x) (xor 0 (xor 0 (not x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 48 functions
+guessing for id jz9sDPkFcUZEl14v2dKcTUSB and program (lambda (x) (or 0 (or x (shr4 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 28 functions
+guessing for id m57XPI9UFVQR4r9kRd0FcWEU and program (lambda (x) (or 0 (or 1 (shr4 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 24 functions
+guessing for id x6BuFQbEBy32V3GRqcr89PJd and program (lambda (x) (or 0 (or 1 (shl1 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 1 seconds

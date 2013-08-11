@@ -1,0 +1,50 @@
+#!/usr/bin/env perl
+
+use v5.14;
+use lib 'lib';
+use ICFP;
+use BV::Parse;
+use API;
+use Evaluator;
+use Data::Printer;
+
+my $prog_id = shift @ARGV;
+my $size    = shift @ARGV;
+my @opers   = @ARGV;
+my $is_dry_run = 0;
+
+my $out;
+eval { $out = BV::Parse::generate( $size, [@opers] ) };
+
+if ( $@ ) {
+    say STDERR "\ngenerate died: $@";
+    exit;
+}
+
+if ( scalar @$out > 129000 ) {
+    say STDERR "Got " . scalar @$out . ". Too many generated programs to check ... skipping";
+    exit;
+}
+
+my ($inputs, $solutions) = @{ BV::Parse::gridify( $out ) };
+my $thinned = Evaluator::eliminate_the_weak( $prog_id, $inputs, $solutions, $is_dry_run );
+
+if (scalar( @$thinned ) > 90) {
+    say STDERR "generated " . scalar( @$thinned ) . " functions - > 90 ... skipping";
+    exit;
+}
+
+say STDERR "Trying " . scalar( @$thinned ) . " functions";
+my $start_time = time();
+
+for my $program ( @$thinned ) {
+    say STDERR "guessing for id " . $prog_id . " and program $program";
+    my $response = API::make_guess( $prog_id, $program, $is_dry_run );
+    p($response);
+
+    last if $response eq "time limit exceeded";
+    last if ref($response) eq 'HASH' && $response->{status} eq 'win';
+}
+
+my $end_time = time();
+say STDERR "Took " . ($end_time - $start_time) . " seconds";

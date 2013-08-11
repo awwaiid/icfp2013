@@ -1,0 +1,15 @@
+Generating solutions.
+Building grid
+1/9
+Trying 2 functions
+guessing for id k1hgI8UVcNAt59Pxb232ph7r and program (lambda (x) (plus 1 x))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds

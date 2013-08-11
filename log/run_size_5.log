@@ -1,0 +1,2471 @@
+generated 81 functions - > 60 ... skipping
+Trying 30 functions
+guessing for id 8dRBOBzJtZK8hqRDNhe78CPo and program (lambda (x) (or 0 (shr4 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFF0",
+        [1] "0x0FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id 8dRBOBzJtZK8hqRDNhe78CPo and program (lambda (x) (or 0 (shr4 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFF0",
+        [1] "0x0FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id 8dRBOBzJtZK8hqRDNhe78CPo and program (lambda (x) (or 0 (shr4 x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 7 seconds
+generated 81 functions - > 60 ... skipping
+Trying 30 functions
+guessing for id 93xoZ6fkd5SIvzbWuOBFmAfO and program (lambda (x) (plus 0 (shr1 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id 93xoZ6fkd5SIvzbWuOBFmAfO and program (lambda (x) (plus 0 (shr1 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id 93xoZ6fkd5SIvzbWuOBFmAfO and program (lambda (x) (plus 0 (shr1 x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 5 seconds
+generated 81 functions - > 60 ... skipping
+Trying 30 functions
+guessing for id AuUiMCnUbSnzXEHoAJZNLUkp and program (lambda (x) (plus 0 (shr16 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0x4000400000000000",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id AuUiMCnUbSnzXEHoAJZNLUkp and program (lambda (x) (plus 0 (shr16 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0x4000400000000000",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id AuUiMCnUbSnzXEHoAJZNLUkp and program (lambda (x) (plus 0 (shr16 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFF",
+        [1] "0x0000FFFFFFFFFFFE",
+        [2] "0x0000FFFFFFFFFFFF"
+    ]
+}
+guessing for id AuUiMCnUbSnzXEHoAJZNLUkp and program (lambda (x) (plus 1 (shr16 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id AuUiMCnUbSnzXEHoAJZNLUkp and program (lambda (x) (plus 1 (shr16 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id AuUiMCnUbSnzXEHoAJZNLUkp and program (lambda (x) (plus 1 (shr16 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0x0000FFFFFFFFFFFD",
+        [2] "0x0001000000000000"
+    ]
+}
+guessing for id AuUiMCnUbSnzXEHoAJZNLUkp and program (lambda (x) (plus x (shr16 0)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x8000800000000000",
+        [2] "0x8000000000000000"
+    ]
+}
+guessing for id AuUiMCnUbSnzXEHoAJZNLUkp and program (lambda (x) (plus x (shr16 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x8000800000000000",
+        [2] "0x8000000000000000"
+    ]
+}
+guessing for id AuUiMCnUbSnzXEHoAJZNLUkp and program (lambda (x) (plus x (shr16 x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 27 seconds
+Trying 24 functions
+guessing for id BXKEdw4ZxVoXxQuZ2ZBdiCsh and program (lambda (x) (shr1 (shr1 (shr1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFC0",
+        [1] "0x03FFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id BXKEdw4ZxVoXxQuZ2ZBdiCsh and program (lambda (x) (shr1 (shr1 (shr1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFC0",
+        [1] "0x03FFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id BXKEdw4ZxVoXxQuZ2ZBdiCsh and program (lambda (x) (shr1 (shr1 (shr1 x))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x0200000000000000",
+        [2] "0x1000000000000000"
+    ]
+}
+guessing for id BXKEdw4ZxVoXxQuZ2ZBdiCsh and program (lambda (x) (shr1 (shr1 (shr4 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFC0",
+        [1] "0x03FFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id BXKEdw4ZxVoXxQuZ2ZBdiCsh and program (lambda (x) (shr1 (shr1 (shr4 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFC0",
+        [1] "0x03FFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id BXKEdw4ZxVoXxQuZ2ZBdiCsh and program (lambda (x) (shr1 (shr1 (shr4 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 21 seconds
+generated 81 functions - > 60 ... skipping
+generated 81 functions - > 60 ... skipping
+Trying 30 functions
+guessing for id NGh6BlUv8gXYJqsp5md3pA5Q and program (lambda (x) (and 0 (shr16 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFF7FFFFFFFFFFF",
+        [1] "0x00007FFF7FFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id NGh6BlUv8gXYJqsp5md3pA5Q and program (lambda (x) (and 0 (shr16 1)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFF7FFFFFFFFFFF",
+        [1] "0x00007FFF7FFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id NGh6BlUv8gXYJqsp5md3pA5Q and program (lambda (x) (and 0 (shr16 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFF7FFFFFFFFFFF",
+        [1] "0x00007FFF7FFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id NGh6BlUv8gXYJqsp5md3pA5Q and program (lambda (x) (and 1 (shr16 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFF7FFFFFFFFFFF",
+        [1] "0x00007FFF7FFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id NGh6BlUv8gXYJqsp5md3pA5Q and program (lambda (x) (and 1 (shr16 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFF7FFFFFFFFFFF",
+        [1] "0x00007FFF7FFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id NGh6BlUv8gXYJqsp5md3pA5Q and program (lambda (x) (and 1 (shr16 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFF7FFFFFFFFFFE",
+        [1] "0x00007FFF7FFFFFFE",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id NGh6BlUv8gXYJqsp5md3pA5Q and program (lambda (x) (and x (shr16 0)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFF7FFFFFFFFFFF",
+        [1] "0x00007FFF7FFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id NGh6BlUv8gXYJqsp5md3pA5Q and program (lambda (x) (and x (shr16 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFF7FFFFFFFFFFF",
+        [1] "0x00007FFF7FFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id NGh6BlUv8gXYJqsp5md3pA5Q and program (lambda (x) (and x (shr16 x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 39 seconds
+Trying 30 functions
+guessing for id Tor7dr5spXd0ZUOL9msdoLrg and program (lambda (x) (or 0 (shr1 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0x6000000000000000",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id Tor7dr5spXd0ZUOL9msdoLrg and program (lambda (x) (or 0 (shr1 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0x6000000000000000",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id Tor7dr5spXd0ZUOL9msdoLrg and program (lambda (x) (or 0 (shr1 x)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0x6000000000000000",
+        [2] "0x2000000000000000"
+    ]
+}
+guessing for id Tor7dr5spXd0ZUOL9msdoLrg and program (lambda (x) (or 1 (shr1 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id Tor7dr5spXd0ZUOL9msdoLrg and program (lambda (x) (or 1 (shr1 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id Tor7dr5spXd0ZUOL9msdoLrg and program (lambda (x) (or 1 (shr1 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id Tor7dr5spXd0ZUOL9msdoLrg and program (lambda (x) (or x (shr1 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xAAAAAAAAAAAAAAAA",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0xAAAAAAAAAAAAAAAA"
+    ]
+}
+guessing for id Tor7dr5spXd0ZUOL9msdoLrg and program (lambda (x) (or x (shr1 1)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xAAAAAAAAAAAAAAAA",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0xAAAAAAAAAAAAAAAA"
+    ]
+}
+guessing for id Tor7dr5spXd0ZUOL9msdoLrg and program (lambda (x) (or x (shr1 x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 39 seconds
+Trying 30 functions
+guessing for id dA2j3fhjMKro3R73ddjfpUTy and program (lambda (x) (plus 0 (not 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFF",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id dA2j3fhjMKro3R73ddjfpUTy and program (lambda (x) (plus 0 (not 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id dA2j3fhjMKro3R73ddjfpUTy and program (lambda (x) (plus 0 (not x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0x3FFFFFFFFFFFFFFF",
+        [2] "0xBFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id dA2j3fhjMKro3R73ddjfpUTy and program (lambda (x) (plus 1 (not 0)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0xFFFFFFFFFFFFFFFD",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id dA2j3fhjMKro3R73ddjfpUTy and program (lambda (x) (plus 1 (not 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFF",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id dA2j3fhjMKro3R73ddjfpUTy and program (lambda (x) (plus 1 (not x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id dA2j3fhjMKro3R73ddjfpUTy and program (lambda (x) (plus x (not 0)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 22 seconds
+Trying 30 functions
+guessing for id eU2iYtEuwA7rfL66sVs055ke and program (lambda (x) (plus 0 (not 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFF",
+        [1] "0x0000000000000000",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id eU2iYtEuwA7rfL66sVs055ke and program (lambda (x) (plus 0 (not 1)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0x0000000000000001",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id eU2iYtEuwA7rfL66sVs055ke and program (lambda (x) (plus 0 (not x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 17 seconds
+Trying 30 functions
+guessing for id l8IfN1utmLC6AfhS58DcDEUh and program (lambda (x) (or 0 (shl1 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0xC000000000000000",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id l8IfN1utmLC6AfhS58DcDEUh and program (lambda (x) (or 0 (shl1 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000002"
+    ]
+}
+guessing for id l8IfN1utmLC6AfhS58DcDEUh and program (lambda (x) (or 0 (shl1 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0xC000000000000000",
+        [2] "0x8000000000000000"
+    ]
+}
+guessing for id l8IfN1utmLC6AfhS58DcDEUh and program (lambda (x) (or 1 (shl1 0)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id l8IfN1utmLC6AfhS58DcDEUh and program (lambda (x) (or 1 (shl1 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000003"
+    ]
+}
+guessing for id l8IfN1utmLC6AfhS58DcDEUh and program (lambda (x) (or 1 (shl1 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xAAAA955555555554",
+        [1] "0xFFFFBFFFFFFFFFFC",
+        [2] "0x55552AAAAAAAAAA9"
+    ]
+}
+guessing for id l8IfN1utmLC6AfhS58DcDEUh and program (lambda (x) (or x (shl1 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x2AAA955555555555",
+        [1] "0x7FFFBFFFFFFFFFFF",
+        [2] "0x2AAA955555555555"
+    ]
+}
+guessing for id l8IfN1utmLC6AfhS58DcDEUh and program (lambda (x) (or x (shl1 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x2AAA955555555554",
+        [1] "0x7FFFBFFFFFFFFFFC",
+        [2] "0x2AAA955555555556"
+    ]
+}
+guessing for id l8IfN1utmLC6AfhS58DcDEUh and program (lambda (x) (or x (shl1 x)))
+timed out - sleeping
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 38 seconds
+Trying 30 functions
+guessing for id oUpABaJ0l3xoZgcgrUbeprSQ and program (lambda (x) (or 0 (shl1 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFFFFFFFFFFFFFF",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id oUpABaJ0l3xoZgcgrUbeprSQ and program (lambda (x) (or 0 (shl1 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFFFFFFFFFFFFFE",
+        [1] "0xFFFFFFFFFFFFFFFC",
+        [2] "0x0000000000000002"
+    ]
+}
+guessing for id oUpABaJ0l3xoZgcgrUbeprSQ and program (lambda (x) (or 0 (shl1 x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 5 seconds
+Trying 24 functions
+guessing for id qHlEtz45IQt1AAJNvbnXVGVg and program (lambda (x) (not (not (not 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x3FFFFFFFFFFFFFFF",
+        [1] "0x0000000000000003",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id qHlEtz45IQt1AAJNvbnXVGVg and program (lambda (x) (not (not (not 1))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id qHlEtz45IQt1AAJNvbnXVGVg and program (lambda (x) (not (not (not x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0xBFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id qHlEtz45IQt1AAJNvbnXVGVg and program (lambda (x) (not (not (shl1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qHlEtz45IQt1AAJNvbnXVGVg and program (lambda (x) (not (not (shl1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000002"
+    ]
+}
+guessing for id qHlEtz45IQt1AAJNvbnXVGVg and program (lambda (x) (not (not (shl1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qHlEtz45IQt1AAJNvbnXVGVg and program (lambda (x) (not (shl1 (not 0))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id qHlEtz45IQt1AAJNvbnXVGVg and program (lambda (x) (not (shl1 (not 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000003"
+    ]
+}
+guessing for id qHlEtz45IQt1AAJNvbnXVGVg and program (lambda (x) (not (shl1 (not x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id qHlEtz45IQt1AAJNvbnXVGVg and program (lambda (x) (not (shl1 (shl1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x3FFFFFFFFFFFFFFF",
+        [1] "0x0000000000000003",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id qHlEtz45IQt1AAJNvbnXVGVg and program (lambda (x) (not (shl1 (shl1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x3FFFFFFFFFFFFFFE",
+        [1] "0x0000000000000007",
+        [2] "0xFFFFFFFFFFFFFFFB"
+    ]
+}
+guessing for id qHlEtz45IQt1AAJNvbnXVGVg and program (lambda (x) (not (shl1 (shl1 x))))
+timed out - sleeping
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 55 seconds
+Trying 30 functions
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and 0 (not 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and 0 (not 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and 0 (not x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and 1 (not 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and 1 (not 1)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and 1 (not x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and x (not 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and x (not 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and x (not x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and (not 0) 0))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and (not 0) 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and (not 0) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and (not 1) 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and (not 1) 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and (not 1) x))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and (not x) 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and (not x) 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (and (not x) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (not (and 0 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (not (and 0 1)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (not (and 0 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (not (and 1 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (not (and 1 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id qORGb2asdQrtD7eA4DApPAE7 and program (lambda (x) (not (and 1 x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 87 seconds
+Trying 24 functions
+guessing for id tLDLVtXE4UmzVi8CxBXGrMOB and program (lambda (x) (shl1 (shl1 (shl1 0))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFFFFFFFFFFFFF8",
+        [1] "0x1FFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id tLDLVtXE4UmzVi8CxBXGrMOB and program (lambda (x) (shl1 (shl1 (shl1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFFFFFFFFFFFFD8",
+        [1] "0x1FFFFFFFFFFFFFF6",
+        [2] "0x0000000000000008"
+    ]
+}
+guessing for id tLDLVtXE4UmzVi8CxBXGrMOB and program (lambda (x) (shl1 (shl1 (shl1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x1000000000000000",
+        [1] "0x0400000000000000",
+        [2] "0x8000000000000000"
+    ]
+}
+guessing for id tLDLVtXE4UmzVi8CxBXGrMOB and program (lambda (x) (shl1 (shl1 (shr4 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFFFFFFFFFFFFF8",
+        [1] "0x1FFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id tLDLVtXE4UmzVi8CxBXGrMOB and program (lambda (x) (shl1 (shl1 (shr4 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFFFFFFFFFFFFF8",
+        [1] "0x1FFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id tLDLVtXE4UmzVi8CxBXGrMOB and program (lambda (x) (shl1 (shl1 (shr4 x))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x0000000000000000",
+        [2] "0x2000000000000000"
+    ]
+}
+guessing for id tLDLVtXE4UmzVi8CxBXGrMOB and program (lambda (x) (shl1 (shr4 (shl1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFFFFFFFFFFFFF8",
+        [1] "0x1FFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id tLDLVtXE4UmzVi8CxBXGrMOB and program (lambda (x) (shl1 (shr4 (shl1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7FFFFFFFFFFFFFF8",
+        [1] "0x1FFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id tLDLVtXE4UmzVi8CxBXGrMOB and program (lambda (x) (shl1 (shr4 (shl1 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 39 seconds
+Trying 30 functions
+guessing for id uBKtBpjHCWSSVNHSEUlFcyBt and program (lambda (x) (plus 0 (shr1 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id uBKtBpjHCWSSVNHSEUlFcyBt and program (lambda (x) (plus 0 (shr1 1)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id uBKtBpjHCWSSVNHSEUlFcyBt and program (lambda (x) (plus 0 (shr1 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id uBKtBpjHCWSSVNHSEUlFcyBt and program (lambda (x) (plus 1 (shr1 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x4000000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id uBKtBpjHCWSSVNHSEUlFcyBt and program (lambda (x) (plus 1 (shr1 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x4000000000000001",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id uBKtBpjHCWSSVNHSEUlFcyBt and program (lambda (x) (plus 1 (shr1 x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 25 seconds
+Trying 30 functions
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or 0 (not 0)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or 0 (not 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0x0000000000000000",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or 0 (not x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or 1 (not 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or 1 (not 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or 1 (not x)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or x (not 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or x (not 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0xBFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or x (not x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or (not 0) 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or (not 0) 1))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or (not 0) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or (not 1) 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0x0000000000000000",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or (not 1) 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or (not 1) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0xBFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or (not x) 0))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or (not x) 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (or (not x) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (not (or 0 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (not (or 0 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0x0000000000000000",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (not (or 0 x)))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (not (or 1 0)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0x0000000000000000",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (not (or 1 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0x0000000000000000",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id vSD47bSvAxYaSf7T9dWXSior and program (lambda (x) (not (or 1 x)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 94 seconds
+Trying 81 functions
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (not (not 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (not (not 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFF0000",
+        [1] "0xFFFE000000000000",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (not (not x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (not (shl1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (not (shl1 1))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0x0000000000000002"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (not (shl1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000080000000",
+        [1] "0xFFFEFFFFFFFEFFFE",
+        [2] "0x0000000100000000"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (not (shr16 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (not (shr16 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (not (shr16 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shl1 (not 0))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shl1 (not 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0x0000000000000003"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shl1 (not x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shl1 (shl1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shl1 (shl1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFB"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shl1 (shl1 x))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shl1 (shr16 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shl1 (shr16 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shl1 (shr16 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shr16 (not 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0xFFFEFFFFFFFFFFFE",
+        [2] "0xFFFF000000000000"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shr16 (not 1))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0xFFFEFFFFFFFFFFFE",
+        [2] "0xFFFF000000000000"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shr16 (not x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFF000000000000"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shr16 (shl1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shr16 (shl1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shr16 (shl1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0xFFFEFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shr16 (shr16 0))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shr16 (shr16 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (not (shr16 (shr16 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (shl1 (not (not 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (shl1 (not (not 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFE",
+        [2] "0x0000000000000002"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (shl1 (not (not x))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000080000000",
+        [1] "0xFFFEFFFFFFFEFFFE",
+        [2] "0x0000000100000000"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (shl1 (not (shl1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFF0000",
+        [1] "0xFFFE000000000000",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (shl1 (not (shl1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFD0000",
+        [1] "0xFFFE000000000004",
+        [2] "0xFFFFFFFFFFFFFFFA"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (shl1 (not (shl1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0xFFFEFFFFFFFFFFFE",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (shl1 (not (shr16 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFF0000",
+        [1] "0xFFFE000000000000",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (shl1 (not (shr16 1))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFF0000",
+        [1] "0xFFFE000000000000",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id 2euH8fBLnp3U6KJNKv5giJOE and program (lambda (x) (shl1 (not (shr16 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 137 seconds
+Trying 81 functions
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (not (not 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (not (not 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (not (not x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (not (shr1 0))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (not (shr1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (not (shr1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (not (shr16 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (not (shr16 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (not (shr16 x))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr1 (not 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x8000000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr1 (not 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x8000000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr1 (not x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x8000000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr1 (shr1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr1 (shr1 1))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr1 (shr1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr1 (shr16 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr1 (shr16 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr1 (shr16 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr16 (not 0))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFF000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr16 (not 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFF000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr16 (not x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFF000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr16 (shr1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr16 (shr1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr16 (shr1 x))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr16 (shr16 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr16 (shr16 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (not (shr16 (shr16 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (shr1 (not (not 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (shr1 (not (not 1))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (shr1 (not (not x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (shr1 (not (shr1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFE0000",
+        [1] "0x7FFF800000000000",
+        [2] "0x7FFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (shr1 (not (shr1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFE0000",
+        [1] "0x7FFF800000000000",
+        [2] "0x7FFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (shr1 (not (shr1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0x7FFFDFFFFFFFFFFF",
+        [2] "0x6FFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (shr1 (not (shr16 0))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFE0000",
+        [1] "0x7FFF800000000000",
+        [2] "0x7FFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (shr1 (not (shr16 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFE0000",
+        [1] "0x7FFF800000000000",
+        [2] "0x7FFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id AqKqlSwHR0R3ewg0TTNvJAmY and program (lambda (x) (shr1 (not (shr16 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 141 seconds
+Trying 81 functions
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (not (not 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (not (not 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (not (not x))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (not (shr1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (not (shr1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (not (shr1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (not (shr16 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (not (shr16 1))))
+timed out - sleeping
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (not (shr16 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr1 (not 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x8000000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr1 (not 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x8000000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr1 (not x))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x8000000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr1 (shr1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr1 (shr1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr1 (shr1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr1 (shr16 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr1 (shr16 1))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr1 (shr16 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr16 (not 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFF000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr16 (not 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFF000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr16 (not x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFF000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr16 (shr1 0))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr16 (shr1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr16 (shr1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr16 (shr16 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr16 (shr16 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (not (shr16 (shr16 x))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (shr1 (not (not 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (shr1 (not (not 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (shr1 (not (not x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (shr1 (not (shr1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFE0000",
+        [1] "0x7FFF800000000000",
+        [2] "0x7FFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (shr1 (not (shr1 1))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFE0000",
+        [1] "0x7FFF800000000000",
+        [2] "0x7FFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (shr1 (not (shr1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0x7FFFDFFFFFFFFFFF",
+        [2] "0x6FFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (shr1 (not (shr16 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFE0000",
+        [1] "0x7FFF800000000000",
+        [2] "0x7FFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (shr1 (not (shr16 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFE0000",
+        [1] "0x7FFF800000000000",
+        [2] "0x7FFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id HT0Cak3QBRwpBWHr7dKX2Mq0 and program (lambda (x) (shr1 (not (shr16 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 144 seconds
+Trying 81 functions
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (not (not 0))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0x0000000000000001",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (not (not 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (not (not x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000001",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFE"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (not (shl1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (not (shl1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000002"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (not (shl1 x))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (not (shr1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (not (shr1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (not (shr1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (shl1 (not 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000000",
+        [1] "0xFFFFFFFFFFFFFFFF",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (shl1 (not 1))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000000002",
+        [1] "0xFFFFFFFFFFFFFFFD",
+        [2] "0x0000000000000003"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (shl1 (not x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x9555555555554AAA",
+        [1] "0x6AAAAAAAAAAAB555",
+        [2] "0x2AAAAAAAAAAA9555"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (shl1 (shl1 0))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0x0000000000000001",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (shl1 (shl1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFA",
+        [1] "0x0000000000000005",
+        [2] "0xFFFFFFFFFFFFFFFB"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (shl1 (shl1 x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x4000000000000000",
+        [1] "0xBFFFFFFFFFFFFFFF",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (shl1 (shr1 0))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0x0000000000000001",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (shl1 (shr1 1))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0xFFFFFFFFFFFFFFFE",
+        [1] "0x0000000000000001",
+        [2] "0xFFFFFFFFFFFFFFFF"
+    ]
+}
+guessing for id IyKasE9nYAssZUSAo1BuIEWr and program (lambda (x) (not (shl1 (shr1 x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+Took 77 seconds

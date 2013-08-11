@@ -1,0 +1,76 @@
+Single guess on 'not' size 3
+
+mburns@euclid:~/projects/icfp2013$ perl -Ilib -MAPI -MData::Printer -E 'p( API::make_guess("88b0CwC0GnfGC7vHER5oDNX0", "(lambda (x) (not x))" ) );'
+url: http://icfpc2013.cloudapp.net/guess?auth=0478AafjgwBHpyHx7Am3ABxhs7VN749W1JqVyzyBvpsH1H json: {"id":"88b0CwC0GnfGC7vHER5oDNX0","program":"(lambda (x) (not x))"}
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+
+
+
+eval given program:
+
+mburns@euclid:~/projects/icfp2013$ perl -Ilib -MAPI -MData::Printer -E 'p( API::make_eval(undef, "(lambda (x) (shr4 x))", ["0x00000000000001","0xFFFFFFFFFFFFFF"] ) );'
+url: http://icfpc2013.cloudapp.net/eval?auth=0478AafjgwBHpyHx7Am3ABxhs7VN749W1JqVyzyBvpsH1H json: {"arguments":["0x00000000000001","0xFFFFFFFFFFFFFF"],"program":"(lambda (x) (shr4 x))"}
+\ {
+    outputs   [
+        [0] "0x0000000000000000",
+        [1] "0x000FFFFFFFFFFFFF"
+    ],
+    status    "ok"
+}
+mburns@euclid:~/projects/icfp2013$ perl -Ilib -MAPI -MData::Printer -E 'p( API::make_eval(undef, "(lambda (x) (shr1 x))", ["0x00000000000001","0xFFFFFFFFFFFFFFFF"] ) );'
+url: http://icfpc2013.cloudapp.net/eval?auth=0478AafjgwBHpyHx7Am3ABxhs7VN749W1JqVyzyBvpsH1H json: {"arguments":["0x00000000000001","0xFFFFFFFFFFFFFFFF"],"program":"(lambda (x) (shr1 x))"}
+\ {
+    outputs   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF"
+    ],
+    status    "ok"
+}
+
+mburns@euclid:~/projects/icfp2013$ perl -Ilib -MAPI -MData::Printer -E 'p( API::make_eval(undef, "(lambda (x) (shl1 x))", ["0x00000000000001","0xFFFFFFFFFFFFFFFF"] ) );'
+url: http://icfpc2013.cloudapp.net/eval?auth=0478AafjgwBHpyHx7Am3ABxhs7VN749W1JqVyzyBvpsH1H json: {"arguments":["0x00000000000001","0xFFFFFFFFFFFFFFFF"],"program":"(lambda (x) (shl1 x))"}
+\ {
+    outputs   [
+        [0] "0x0000000000000002",
+        [1] "0xFFFFFFFFFFFFFFFE"
+    ],
+    status    "ok"
+}
+
+
+
+eval given id:
+
+mburns@euclid:~/projects/icfp2013$ perl -Ilib -MAPI -MData::Printer -E 'p( API::make_eval("BMSBBoH11vO89CoNvhaNVPJQ", undef, ["0x00000000000001","0xFFFFFFFFFFFFFFFF"] ) );'
+url: http://icfpc2013.cloudapp.net/eval?auth=0478AafjgwBHpyHx7Am3ABxhs7VN749W1JqVyzyBvpsH1H json: {"id":"BMSBBoH11vO89CoNvhaNVPJQ","arguments":["0x00000000000001","0xFFFFFFFFFFFFFFFF"]}
+\ {
+    outputs   [
+        [0] "0x0000000000000000",
+        [1] "0x7FFFFFFFFFFFFFFF"
+    ],
+    status    "ok"
+}
+
+
+another guess wins!
+
+mburns@euclid:~/projects/icfp2013$ perl -Ilib -MAPI -MData::Printer -E 'p( API::make_guess("BMSBBoH11vO89CoNvhaNVPJQ", "(lambda (x) (shr1 x))" ) );'
+url: http://icfpc2013.cloudapp.net/guess?auth=0478AafjgwBHpyHx7Am3ABxhs7VN749W1JqVyzyBvpsH1H json: {"id":"BMSBBoH11vO89CoNvhaNVPJQ","program":"(lambda (x) (shr1 x))"}
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 1
+    },
+    status      "win"
+}
+

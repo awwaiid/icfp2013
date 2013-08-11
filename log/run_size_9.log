@@ -1,0 +1,365 @@
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+Trying 2 functions
+guessing for id mquRaqLbmpfbGMZuek7MaAAh and program (lambda (x) (if0 (xor x (shr1 (shl1 x))) 1 x))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 4 seconds
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+Trying 2 functions
+guessing for id z6x9tkINp8OY1A3wNQ0ZVcdt and program (lambda (x) (if0 (xor x (shr1 (shl1 x))) 1 x))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 1 seconds
+Trying 2 functions
+guessing for id 5Ae9CPDclS7EK42VmuBseItn and program (lambda (x) (fold x 0 (lambda (x y) (plus y (shr4 x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 2 functions
+guessing for id 9gql4GaaJkzyxH9qaSzHOcFz and program (lambda (x) (fold x 0 (lambda (x y) (plus x (shl1 y)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 14 functions
+guessing for id ANg22Ps0RpxNy4Le9cAyupFX and program (lambda (x) (xor (shr4 0) (fold x 0 (lambda (x y) x))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 5 functions
+guessing for id Az8fmR42gQ0ug3Z9DFI4hbWh and program (lambda (x) (plus (shr4 (fold x 0 (lambda (x y) x))) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x0000000000000088",
+        [2] "0x8000000000000008"
+    ]
+}
+guessing for id Az8fmR42gQ0ug3Z9DFI4hbWh and program (lambda (x) (plus (fold x 0 (lambda (x y) x)) (shr4 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000800000000000",
+        [1] "0x0000000000000000",
+        [2] "0x0000080000000000"
+    ]
+}
+guessing for id Az8fmR42gQ0ug3Z9DFI4hbWh and program (lambda (x) (plus (fold x 0 (lambda (x y) (shr4 x))) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x0000000000000088",
+        [2] "0x8000000000000008"
+    ]
+}
+guessing for id Az8fmR42gQ0ug3Z9DFI4hbWh and program (lambda (x) (fold x 0 (lambda (x y) (plus x (shr4 x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 9 seconds
+Trying 2 functions
+guessing for id FuvOReHb1PlXSdao9SrkEwBX and program (lambda (x) (fold x 0 (lambda (x y) (xor x (shr4 y)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 16 functions
+guessing for id G3LyGESGgFhAUk84U4FVB7xv and program (lambda (x) (plus 0 (shr4 (fold x 0 (lambda (x y) x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 5 functions
+guessing for id IApCCAAoXaOw9K9TJRkyoyBB and program (lambda (x) (xor (shr1 (fold x 0 (lambda (x y) x))) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x00000000000000C0",
+        [2] "0x8000000000000040"
+    ]
+}
+guessing for id IApCCAAoXaOw9K9TJRkyoyBB and program (lambda (x) (xor (fold x 0 (lambda (x y) x)) (shr1 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000080",
+        [1] "0x00000000000000C0",
+        [2] "0x40000000000000C0"
+    ]
+}
+guessing for id IApCCAAoXaOw9K9TJRkyoyBB and program (lambda (x) (xor (fold x 0 (lambda (x y) (shr1 x))) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x00000000000000C0",
+        [2] "0x8000000000000040"
+    ]
+}
+guessing for id IApCCAAoXaOw9K9TJRkyoyBB and program (lambda (x) (fold x 0 (lambda (x y) (xor x (shr1 x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 6 seconds
+Trying 26 functions
+guessing for id JAYKI0MqhGXKE2MWQcXUI8Ju and program (lambda (x) (or 0 (shr1 (fold x 0 (lambda (x y) x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 6 functions
+guessing for id LOxNNOA314BwnbtbKiEV39Cw and program (lambda (x) (fold x 0 (lambda (x y) (xor x (not y)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 2 functions
+guessing for id PwQIcUZNbAHuq6ihD2K0buR4 and program (lambda (x) (fold x 0 (lambda (x y) (shl1 (xor x y)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 1 seconds
+Trying 2 functions
+guessing for id S1M78dS0rzOgr21d1g2ofnuM and program (lambda (x) (fold x 0 (lambda (x y) (shl1 (xor x y)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 1 seconds
+Trying 7 functions
+guessing for id SssWBwNtMe1DSEjMxWpFI9fu and program (lambda (x) (plus 1 (shr4 (fold x 0 (lambda (x y) x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 2 functions
+guessing for id gBJpswDjEtlz8BYncJozqaE0 and program (lambda (x) (fold x 0 (lambda (x y) (or x (shl1 y)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 5 functions
+guessing for id gKCn4lwt2UK3zcmOIBDOTfxk and program (lambda (x) (plus (shl1 (fold x 0 (lambda (x y) x))) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x0000000000000180",
+        [2] "0x8000000000000100"
+    ]
+}
+guessing for id gKCn4lwt2UK3zcmOIBDOTfxk and program (lambda (x) (plus (fold x 0 (lambda (x y) x)) (shl1 x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000080000",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000100000"
+    ]
+}
+guessing for id gKCn4lwt2UK3zcmOIBDOTfxk and program (lambda (x) (plus (fold x 0 (lambda (x y) (shl1 x))) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x0000000000000180",
+        [2] "0x8000000000000100"
+    ]
+}
+guessing for id gKCn4lwt2UK3zcmOIBDOTfxk and program (lambda (x) (fold x 0 (lambda (x y) (plus x (shl1 x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 7 seconds
+Trying 1 functions
+guessing for id hLUfKeu5vSFhCBR5cr5cFAyb and program (lambda (x) (fold x 0 (lambda (x y) (if0 y x y))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 2 functions
+guessing for id lI8PpaXo83XA6c1htL4FDXy5 and program (lambda (x) (fold x 0 (lambda (x y) (plus y (shr1 x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 2 functions
+guessing for id nebLBvyOTrAMNjHHEVDcyPFo and program (lambda (x) (fold x 0 (lambda (x y) (plus y (shr4 x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 2 functions
+guessing for id qKzrTWVbQvveEftUksazEjyv and program (lambda (x) (fold x 0 (lambda (x y) (shl1 (xor x y)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 1 seconds
+Trying 16 functions
+guessing for id uCG1aB8JWWGJADmvexMyVebY and program (lambda (x) (xor 0 (shl1 (fold x 0 (lambda (x y) x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 23 functions
+guessing for id uLwBnNRmwcHpFkIWf5AmAjKX and program (lambda (x) (xor 0 (shr1 (fold x 0 (lambda (x y) x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds

@@ -1,0 +1,400 @@
+Got 802111. Too many generated programs to check ... skipping
+Got 216306. Too many generated programs to check ... skipping
+Can't use an undefined value as an ARRAY reference at ./bin/thin_the_herd line 51.
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+Got 219054. Too many generated programs to check ... skipping
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+Got 194196. Too many generated programs to check ... skipping
+Got 219054. Too many generated programs to check ... skipping
+Trying 382 functions
+guessing for id 8UCal46REDbMBoYY3A1lfc7n and program (lambda (x) (if0 0 (and (fold x 0 (lambda (x y) x)) x) 0))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7B00000000000000",
+        [1] "0x000000000000007B",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id 8UCal46REDbMBoYY3A1lfc7n and program (lambda (x) (if0 0 (and (fold x 0 (lambda (x y) x)) x) 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7B00000000000000",
+        [1] "0x000000000000007B",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id 8UCal46REDbMBoYY3A1lfc7n and program (lambda (x) (if0 0 (and (fold x 0 (lambda (x y) x)) x) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x7B00000000000000",
+        [1] "0x000000000000007B",
+        [2] "0x0000000000000000"
+    ]
+}
+guessing for id 8UCal46REDbMBoYY3A1lfc7n and program (lambda (x) (if0 0 (fold x 0 (lambda (x y) x)) (and 0 0)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 6 seconds
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+Got 219054. Too many generated programs to check ... skipping
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+Trying 24 functions
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (if0 x 0 (xor 1 (fold x 0 (lambda (x y) x)))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000010400",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (if0 x 0 (xor (fold x 0 (lambda (x y) 1)) x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0100000000000000",
+        [1] "0x0000000000000001",
+        [2] "0x0100000000000001"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (if0 x 0 (xor (fold x 0 (lambda (x y) x)) 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000010400",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (if0 x 0 (fold x 0 (lambda (x y) (xor 1 x)))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000010400",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (if0 x 0 (fold x 0 (lambda (x y) (xor x 1)))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000010400",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (if0 x x (xor 1 (fold x 0 (lambda (x y) x)))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0200000000000000",
+        [1] "0x0000000000000002",
+        [2] "0x0000000000000003"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (if0 x x (xor (fold x 0 (lambda (x y) 1)) x)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000100000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000100000001"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (if0 x x (xor (fold x 0 (lambda (x y) x)) 1)))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0200000000000000",
+        [1] "0x0000000000000002",
+        [2] "0x0000000000000003"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (if0 x x (fold x 0 (lambda (x y) (xor 1 x)))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0200000000000000",
+        [1] "0x0000000000000002",
+        [2] "0x0000000000000003"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (if0 x x (fold x 0 (lambda (x y) (xor x 1)))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0200000000000000",
+        [1] "0x0000000000000002",
+        [2] "0x0000000000000003"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (xor 1 (if0 x 1 (fold x 0 (lambda (x y) x)))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000010400",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (xor (if0 x 0 1) (fold x 0 (lambda (x y) x))))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0000000000000008",
+        [2] "0x0000000000000009"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (xor (if0 x 0 (fold x 0 (lambda (x y) 1))) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000100000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000100000001"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (xor (if0 x 1 (fold x 0 (lambda (x y) x))) 1))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000000010400",
+        [1] "0x0000000000000000",
+        [2] "0x0000000000000001"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (xor (if0 x x 1) (fold x 0 (lambda (x y) x))))
+timed out - sleeping
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0800000000000000",
+        [1] "0x0000000000000008",
+        [2] "0x0000000000000009"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (xor (if0 x x (fold x 0 (lambda (x y) 1))) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000100000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000100000001"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (xor (fold x 0 (lambda (x y) (if0 x y 1))) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x0000000100000000",
+        [1] "0x0000000000000001",
+        [2] "0x0000000100000001"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (xor (fold x 0 (lambda (x y) (if0 y x 1))) x))
+\ {
+    status   "mismatch",
+    values   [
+        [0] "0x8000000000000000",
+        [1] "0x0000000000000080",
+        [2] "0x8000000000000080"
+    ]
+}
+guessing for id ESAMQcoZ9jjw3tZ7JBR2w710 and program (lambda (x) (fold x 0 (lambda (x y) (if0 y x (xor 1 x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 68 seconds
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+Trying 42 functions
+guessing for id JyKeOvpkiAQXu639XENRr9tA and program (lambda (x) (or 0 (fold x 0 (lambda (x y) (or x (not y))))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 1 seconds
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+
+
+generate died: too many results at lib/BV/Parse.pm line 292.
+

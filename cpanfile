@@ -8,3 +8,4 @@ requires 'File::Slurp';
 requires 'Algorithm::Evolutionary';
 requires 'Try::Tiny';
 requires 'Math::Int64';
+requires 'Parallel::ForkManager';

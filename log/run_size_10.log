@@ -1,0 +1,209 @@
+oper has fold ... skipping
+Got 539670. Too many generated programs to check ... skipping
+Got 432183. Too many generated programs to check ... skipping
+oper has fold ... skipping
+Got 539670. Too many generated programs to check ... skipping
+Got 432183. Too many generated programs to check ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+Got 432183. Too many generated programs to check ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+Got 432183. Too many generated programs to check ... skipping
+Got 432183. Too many generated programs to check ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+Got 539670. Too many generated programs to check ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+Got 539670. Too many generated programs to check ... skipping
+Got 539670. Too many generated programs to check ... skipping
+Got 432183. Too many generated programs to check ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+Got 432183. Too many generated programs to check ... skipping
+oper has fold ... skipping
+oper has fold ... skipping
+Got 1921401. Too many generated programs to check ... skipping
+Trying 83 functions
+guessing for id 3NvJg8IMaBChyQAe2OChXKZY and program (lambda (x) (if0 0 (shr1 (fold x 0 (lambda (x y) x))) 0))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 1 seconds
+Got 539670. Too many generated programs to check ... skipping
+Got 432183. Too many generated programs to check ... skipping
+Trying 78 functions
+guessing for id CRhsaatCmavwyMRnDANyzRGO and program (lambda (x) (if0 0 (fold x 0 (lambda (x y) x)) (not 0)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Got 539670. Too many generated programs to check ... skipping
+Got 432183. Too many generated programs to check ... skipping
+Trying 74 functions
+guessing for id DmDL1lh0awb1c1EJ7VefSFwT and program (lambda (x) (if0 0 (fold x 0 (lambda (x y) x)) (not 0)))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 1 seconds
+Got 128502. Too many generated programs to check ... skipping
+Got 432183. Too many generated programs to check ... skipping
+Trying 25 functions
+guessing for id Gu6BfAsxaHhOkiw7Oux7fCKK and program (lambda (x) (shl1 (shr1 (shl1 (shr4 (fold x 0 (lambda (x y) x)))))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Got 128502. Too many generated programs to check ... skipping
+Trying 28 functions
+guessing for id Ii74BtpX7K1c4rALIXB0NWRE and program (lambda (x) (xor 0 (fold x 0 (lambda (x y) (xor x y)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 1 seconds
+Trying 4 functions
+guessing for id J81aDMyQAxMASAAjBhelperd and program (lambda (x) (fold x 0 (lambda (x y) (plus x (xor x y)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 1 seconds
+Trying 111 functions
+guessing for id JwV0vVe7SiacVIxU1ZSIIJQY and program (lambda (x) (or 0 (or 0 (fold x 0 (lambda (x y) x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 93 functions
+guessing for id K8epLRlDBfOqEq0i8XkpL0Nw and program (lambda (x) (and 1 (and 1 (fold x 0 (lambda (x y) x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 1 seconds
+Trying 1 functions
+guessing for id Kuv5TCUdBucrirkkg5RKd4NB and program (lambda (x) (fold x 0 (lambda (x y) (not (if0 x y x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Got 128502. Too many generated programs to check ... skipping
+Got 432183. Too many generated programs to check ... skipping
+Got 432183. Too many generated programs to check ... skipping
+Trying 12 functions
+guessing for id Vg7MZq5EkSynszb2wiRP34MD and program (lambda (x) (fold x 0 (lambda (x y) (plus 1 (plus x y)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Got 128502. Too many generated programs to check ... skipping
+Got 539670. Too many generated programs to check ... skipping
+Trying 87 functions
+guessing for id bVjXfDmHlf6lPjEgRjhNYWdn and program (lambda (x) (xor 0 (xor 0 (fold x 0 (lambda (x y) x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Got 128502. Too many generated programs to check ... skipping
+Got 539670. Too many generated programs to check ... skipping
+Got 539670. Too many generated programs to check ... skipping
+Got 432183. Too many generated programs to check ... skipping
+Got 128502. Too many generated programs to check ... skipping
+Got 128502. Too many generated programs to check ... skipping
+Got 432183. Too many generated programs to check ... skipping
+Trying 32 functions
+guessing for id tKySdtJ3HBkec7gr595EQWGy and program (lambda (x) (and 1 (xor 1 (fold x 0 (lambda (x y) x)))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 2 seconds
+Trying 6 functions
+guessing for id wxiw7HNmq2Xlt8ZGu6K1xgKB and program (lambda (x) (shl1 (shl1 (fold x 0 (lambda (x y) (xor x y))))))
+\ {
+    lightning   JSON::XS::Boolean  {
+        Parents       JSON::Boolean
+        public methods (0)
+        private methods (1) : __ANON__
+        internals: 0
+    },
+    status      "win"
+}
+Took 1 seconds
+Got 1921401. Too many generated programs to check ... skipping
