@@ -470,6 +470,38 @@ sub gen_exp_normalize {
   # NORMALIZER => 'gen_exp_normalize',
 # );
 
+use IPC::Open2;
+use IO::Handle;
+
+STDOUT->autoflush(1);
+STDERR->autoflush(1);
+STDIN->autoflush(1);
+
+my ($interp_out, $interp_in);
+
+func init_ocaml_eval() {
+  my $pid = open2($interp_out, $interp_in, 'interp/interp');
+  $interp_out->autoflush(1);
+  $interp_in->autoflush(1);
+}
+
+func ocaml_eval($program, @inputs) {
+  @inputs = map { sprintf "0x%016X", $_ } @inputs;
+  # init_ocaml_eval() if ! $interp_out;
+  init_ocaml_eval();
+  # say "Sending program: $program";
+  print $interp_in "$program\n";
+  # say "Sending inputs: @inputs";
+  print $interp_in "@inputs\n";
+  # say "Getting results";
+  my @results;
+  foreach my $i (@inputs) {
+    push @results, <$interp_out>;
+    # say "Got @results";
+  }
+  return @results;
+}
+
 func gridify($progs) {
   # my @inputs = map { uint64_rand() } 1..256;
   my @inputs = map { uint64_rand() } 1..246;
@@ -483,9 +515,10 @@ func gridify($progs) {
   print "Building grid\n";
   foreach my $program (@$progs) {
     print "$c/".(scalar(@$progs))."\r" unless $c++ % 100;
-    my $parsed_program = $parser->parse($program);
-    my @results = map { $parser->evaluate($parsed_program, $_) } @inputs;
-    @results = map { sprintf "0x%016X", $_ } @results;
+    # my $parsed_program = $parser->parse($program);
+    # my @results = map { $parser->evaluate($parsed_program, $_) } @inputs;
+    # @results = map { sprintf "0x%016X", $_ } @results;
+    my @results = ocaml_eval($program, @inputs);
     my $r = join(',',@results);
     $grid->{$r} //= [];
     push $grid->{$r}, $program;
