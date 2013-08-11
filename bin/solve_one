@@ -29,11 +29,6 @@ if ( scalar @$out > 129000 ) {
 my ($inputs, $solutions) = @{ BV::Parse::gridify( $out ) };
 my $thinned = Evaluator::eliminate_the_weak( $prog_id, $inputs, $solutions, $is_dry_run );
 
-if (scalar( @$thinned ) > 90) {
-    say STDERR "generated " . scalar( @$thinned ) . " functions - > 90 ... skipping";
-    exit;
-}
-
 say STDERR "Trying " . scalar( @$thinned ) . " functions";
 my $start_time = time();
 

@@ -13,37 +13,37 @@ use File::Slurp;
 my $problems = API::get_pending_problems();
 my @machines = read_file('avail_machines.txt', { chomp => 1 });
 @machines = (@machines) x 2; # 2 per machine
-my $pm = Parallel::ForkManager->new( 2 );
+p(@machines);
 
-#  my $pm = Parallel::ForkManager->new(scalar @machines);
+my $pm = Parallel::ForkManager->new(scalar @machines);
 
 #  $problems = [
     #  {
-        #  id        => "WiZ821WSzUkhIBSWkt8Y0nlp",
-        #  size      => 4,
-        #  operators => [qw( xor )]
+        #  id        => "55NVf2C7bthwAJNFHqOblPcG",
+        #  size      => 8,
+        #  operators => [qw( if0 plus shl1 )]
     #  },
     #  {
-        #  id        => "gJTJBvjfmPSY5rzCtczct2lM",
-        #  size      => 4,
-        #  operators => [qw( shr1 shr4 )]
+        #  id        => "1ngcG8Lt9kn9wBB8I9S9668S",
+        #  size      => 8,
+        #  operators => [qw( or shl1 shr16 xor )]
     #  },
     #  {
-        #  id        => "v3BwVjwjQvv05qT6cF6rOUEA",
-        #  size      => 4,
-        #  operators => [qw( xor )]
+        #  id        => "yYegNCtraiATA26HFdNHmczq",
+        #  size      => 8,
+        #  operators => [qw( not or plus shr4 )]
     #  },
     #  {
-        #  id        => "w8wlVNelbXIufaEBtW7dq6u7",
-        #  size      => 4,
-        #  operators => [qw( sh1l )]
+        #  id        => "6HONa6hBfx6Ap18HAlBpGRQ4",
+        #  size      => 8,
+        #  operators => [qw( and or )]
     #  },
 #  ];
 
 
 my $cur_machine = 0;
 for my $problem ( @$problems ) {
-next unless $problem->{size} == 10;
+#  next unless $problem->{size} == 10;
     #p($problem);
     my $machine = $machines[$cur_machine++];
     $cur_machine %= scalar @machines;
