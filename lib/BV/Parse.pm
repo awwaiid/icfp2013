@@ -286,8 +286,9 @@ func limit_ops($ops_list) {
 my $c = 0;
 my $is_fold = 0;
 my $is_tfold = 0;
-func gen_exp($max_cost, $ops) {
+func gen_exp($max_cost, $min_cost, $ops) {
   print "." unless $c++ % 10000;
+  $min_cost = 1 if $min_cost < 1;
 # die "too many results" if $c > 135000;
   # say "gen_exp($max_cost)";
   my @results;
@@ -301,15 +302,15 @@ func gen_exp($max_cost, $ops) {
       foreach my $op (@{ $ops->{$cost} }) {
         given($op) {
           when('if0') {
-            my $conds = gen_exp($max_cost - 3, $ops);
+            my $conds = gen_exp($max_cost - 3, $min_cost - 1, $ops);
             foreach my $cond (@$conds) {
               # my $cond = clone $cond;
               my $cond_cost = $cond->[0];
-              my $iftrues = gen_exp($max_cost - $cond_cost - 2, $ops);
+              my $iftrues = gen_exp($max_cost - $cond_cost - 2, $min_cost - $cond_cost - 1, );
               foreach my $iftrue (@$iftrues) {
                 # my $iftrue = clone $iftrue;
                 my $iftrue_cost = $iftrue->[0];
-                my $iffalses = gen_exp($max_cost - $cond_cost - $iftrue_cost - 1, $ops);
+                my $iffalses = gen_exp($max_cost - $cond_cost - $iftrue_cost - 1, $min_cost - $cond_cost - $iftrue_cost - 1, );
                 foreach my $iffalse (@$iffalses) {
                   my $iffalse_cost = $iffalse->[0];
                   push @results, [
@@ -341,15 +342,15 @@ func gen_exp($max_cost, $ops) {
 
           # (fold e0 e1 (lambda (y z) e2))
           when('fold') {
-            my $e0s = gen_exp($max_cost - 4, $ops);
+            my $e0s = gen_exp($max_cost - 4, $min_cost - 1, $ops);
             foreach my $e0 (@$e0s) {
               my $e0_cost = $e0->[0];
-              my $e1s = gen_exp($max_cost - $e0_cost - 3, $ops);
+              my $e1s = gen_exp($max_cost - $e0_cost - 3, $min_cost - $e0_cost - 1, $ops);
               foreach my $e1 (@$e1s) {
                 # my $iftrue = clone $iftrue;
                 my $e1_cost = $e1->[0];
                 $is_fold = 1;
-                my $e2s = gen_exp($max_cost - $e0_cost - $e1_cost - 2, $ops);
+                my $e2s = gen_exp($max_cost - $e0_cost - $e1_cost - 2, $min_cost - $e0_cost - $e1_cost - 1, $ops);
                 $is_fold = 0;
                 foreach my $e2 (@$e2s) {
                   my $e2_cost = $e2->[0];
@@ -371,7 +372,7 @@ func gen_exp($max_cost, $ops) {
                 # my $iftrue = clone $iftrue;
                 my $e1_cost = $e1->[0];
                 $is_tfold = 1;
-                my $e2s = gen_exp($max_cost - $e0_cost - $e1_cost - 2, $ops);
+                my $e2s = gen_exp($max_cost - $e0_cost - $e1_cost - 2, $min_cost - 4, $ops);
                 $is_tfold = 0;
                 foreach my $e2 (@$e2s) {
                   my $e2_cost = $e2->[0];
@@ -385,11 +386,11 @@ func gen_exp($max_cost, $ops) {
 
           # Binary
           when(/and|or|xor|plus/) {
-            my $lefts = gen_exp($max_cost - 2, $ops);
+            my $lefts = gen_exp($max_cost - 2, 1, $ops);
             foreach my $left (@$lefts) {
               # my $left = clone($left);
               my $left_cost = $left->[0];
-              my $rights = gen_exp($max_cost - $left_cost - 1, $ops);
+              my $rights = gen_exp($max_cost - $left_cost - 1, $min_cost - $left_cost - 1, $ops);
               # say "rights: " . Dumper($rights);
               foreach my $right (@$rights) {
                 # my $right = clone($right);
@@ -404,7 +405,7 @@ func gen_exp($max_cost, $ops) {
 
           # Unary
           when(/not|shl1|shr1|shr4|shr16/) {
-            my $rights = gen_exp($max_cost - 1, $ops);
+            my $rights = gen_exp($max_cost - 1, $min_cost - 1, $ops);
             foreach my $right (@$rights) {
               my $right_cost = $right->[0];
               push @results, [
@@ -418,6 +419,7 @@ func gen_exp($max_cost, $ops) {
   }
 
   # say "gen_exp($max_cost) -> " . Dumper(\@results);
+  @results = grep { $_->[0] >= $min_cost } @results;
   return [ @results ];
 }
 
@@ -435,8 +437,9 @@ func generate($cost, $ops) {
   my $ops_struct = limit_ops($ops);
   $c = 0;
   print "Generating solutions";
-  my $combos = gen_exp($cost - 1, $ops_struct);
+  my $combos = gen_exp($cost - 1, $cost - 1, $ops_struct);
   print "\n";
+  say "Combo count: " . scalar @$combos;
   # say "Combos: " . Dumper($combos);
   return [
     map { render(['lambda (x)', $_ ]) }
