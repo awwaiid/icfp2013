@@ -107,7 +107,12 @@ sub get_pending_problems {
         push @pending, $prob if ! $prob->{solved};
     }
 
-    return \@pending;
+    my @sorted = map { $_->[0] }
+                 sort { $a->[1] <=> $b->[1] }
+                 map { [$_, $_->{size}] }
+                 @pending;
+
+    return \@sorted;
 }
 
 1;

@@ -288,7 +288,7 @@ my $is_fold = 0;
 my $is_tfold = 0;
 func gen_exp($max_cost, $ops) {
   print "." unless $c++ % 10000;
-die "too many results" if $c > 135000;
+# die "too many results" if $c > 135000;
   # say "gen_exp($max_cost)";
   my @results;
   push @results, [1, 0];

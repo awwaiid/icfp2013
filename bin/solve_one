@@ -21,10 +21,10 @@ if ( $@ ) {
     exit;
 }
 
-if ( scalar @$out > 129000 ) {
-    say STDERR "Got " . scalar @$out . ". Too many generated programs to check ... skipping";
-    exit;
-}
+#  if ( scalar @$out > 129000 ) {
+    #  say STDERR "Got " . scalar @$out . ". Too many generated programs to check ... skipping";
+    #  exit;
+#  }
 
 my ($inputs, $solutions) = @{ BV::Parse::gridify( $out ) };
 my $thinned = Evaluator::eliminate_the_weak( $prog_id, $inputs, $solutions, $is_dry_run );
