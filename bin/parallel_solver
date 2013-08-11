@@ -54,7 +54,7 @@ for my $problem ( @$problems ) {
     $pm->start and next;
 
     say "$machine call solve_one on $id $size $oper_list";
-    print `ssh $machine 'bash -lc "SHELL=/bin/bash source ~/perl5/perlbrew/etc/bashrc ; cd projects/icfp2013 ; nice bin/solve_one $id $size $oper_list > log/run_$id.log 2>&1"'`;
+    print `ssh $machine 'bash -lc "SHELL=/bin/bash source ~/perl5/perlbrew/etc/bashrc ; cd projects/icfp2013 ; nice bin/solve_one $id $size $oper_list > log/run_${id}_$machine.log 2>&1"'`;
     say "solving $id done.";
     $pm->finish;
 }
