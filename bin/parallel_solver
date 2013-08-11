@@ -12,7 +12,7 @@ use File::Slurp;
 
 my $problems = API::get_pending_problems();
 my @machines = read_file('avail_machines.txt', { chomp => 1 });
-@machines = (@machines) x 2; # 2 per machine
+#  @machines = (@machines) x 2; # 2 per machine
 p(@machines);
 
 my $pm = Parallel::ForkManager->new(scalar @machines);
