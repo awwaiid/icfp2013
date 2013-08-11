@@ -206,14 +206,13 @@ let main () =
 
     List.iter (fun i ->
       printf "%s\n" (to_hex_string (eval prog i));
-(*
-      eprintf "INTERP: Output result %s\n" (to_hex_string (eval prog i));
-*)
+(*       eprintf "INTERP: Output result %s\n" (to_hex_string (eval prog i)); *)
       flush_all ()
     ) inputs;
     flush_all ()
 (*    done  *)
 
 let _ =
-(*   main (); *)
-  main ()
+  while true do
+    main ()
+  done

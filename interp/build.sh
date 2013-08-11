@@ -1,2 +1,2 @@
 #!/bin/sh
-ocamlopt.opt -o interp str.cmxa interp.ml
+ocamlopt.opt -o interp unix.cmxa str.cmxa interp.ml

@@ -486,9 +486,12 @@ func init_ocaml_eval() {
 }
 
 func ocaml_eval($program, @inputs) {
+  STDOUT->autoflush(1);
+  STDERR->autoflush(1);
+  STDIN->autoflush(1);
   @inputs = map { sprintf "0x%016X", $_ } @inputs;
-  # init_ocaml_eval() if ! $interp_out;
-  init_ocaml_eval();
+  init_ocaml_eval() if ! $interp_out;
+  # init_ocaml_eval();
   # say "Sending program: $program";
   print $interp_in "$program\n";
   # say "Sending inputs: @inputs";
@@ -496,10 +499,12 @@ func ocaml_eval($program, @inputs) {
   # say "Getting results";
   my @results;
   foreach my $i (@inputs) {
-    push @results, <$interp_out>;
-    # say "Got @results";
+    my $r = <$interp_out>;
+    chomp $r;
+    # say "Got result: $r";
+    push @results, $r;
   }
-  chomp @results;
+  # say "Done getting results";
   return @results;
 }
 
