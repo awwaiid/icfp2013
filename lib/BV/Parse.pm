@@ -510,7 +510,8 @@ func ocaml_eval($program, @inputs) {
 
 func gridify($progs) {
   # my @inputs = map { uint64_rand() } 1..256;
-  my @inputs = map { uint64_rand() } 1..246;
+  # my @inputs = map { uint64_rand() } 1..246;
+  my @inputs = map { uint64_rand() } 1..20;
   push @inputs, map { uint64($_) } -4..5;
   # print Dumper(\@inputs);
   # my @inputs = map { uint64($_) } -127..128;
