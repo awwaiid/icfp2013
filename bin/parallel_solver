@@ -8,49 +8,56 @@ use API;
 use Evaluator;
 use Parallel::ForkManager;
 use Data::Printer;
+use File::Slurp;
 
 my $problems = API::get_pending_problems();
+my @machines = read_file('avail_machines.txt', { chomp => 1 });
+@machines = (@machines) x 2; # 2 per machine
 my $pm = Parallel::ForkManager->new( 2 );
+
 #  my $pm = Parallel::ForkManager->new(scalar @machines);
 
-$problems = [
-    {
-        id        => "aSURelJ3AswfGoufBiVGrB3R",
-        size      => 4,
-        operators => [qw( and )]
-    },
-    {
-        id        => "AJXB68zXcHPjLCQUAJIvKJjb",
-        size      => 4,
-        operators => [qw( shr16 shr4 )]
-    },
-    {
-        id        => "uV6c9k746ypkMR7iZBErmYo8",
-        size      => 4,
-        operators => [qw( not shr16 )]
-    },
-    {
-        id        => "8uAVhUs9sY2kEBG38VmJ09nS",
-        size      => 4,
-        operators => [qw( or )]
-    },
-];
+#  $problems = [
+    #  {
+        #  id        => "WiZ821WSzUkhIBSWkt8Y0nlp",
+        #  size      => 4,
+        #  operators => [qw( xor )]
+    #  },
+    #  {
+        #  id        => "gJTJBvjfmPSY5rzCtczct2lM",
+        #  size      => 4,
+        #  operators => [qw( shr1 shr4 )]
+    #  },
+    #  {
+        #  id        => "v3BwVjwjQvv05qT6cF6rOUEA",
+        #  size      => 4,
+        #  operators => [qw( xor )]
+    #  },
+    #  {
+        #  id        => "w8wlVNelbXIufaEBtW7dq6u7",
+        #  size      => 4,
+        #  operators => [qw( sh1l )]
+    #  },
+#  ];
 
 
+my $cur_machine = 0;
 for my $problem ( @$problems ) {
+next unless $problem->{size} == 10;
     #p($problem);
+    my $machine = $machines[$cur_machine++];
+    $cur_machine %= scalar @machines;
     my $id = $problem->{id};
     my $size = $problem->{size};
     my $oper_list = join(' ', @{ $problem->{operators} });
 
     $pm->start and next;
 
-    say "local host call solve_one on $id $size $oper_list";
-    print `ssh localhost 'bash -lc "source ~/perl5/perlbrew/etc/bashrc ; cd projects/icfp2013 ; nice bin/solve_one $id $size $oper_list > log/run_$id.log 2>&1"'`;
+    say "$machine call solve_one on $id $size $oper_list";
+    print `ssh $machine 'bash -lc "source ~/perl5/perlbrew/etc/bashrc ; cd projects/icfp2013 ; nice bin/solve_one $id $size $oper_list > log/run_$id.log 2>&1"'`;
     say "solving $id done.";
     $pm->finish;
 }
-
 
 $pm->wait_all_children;
 
