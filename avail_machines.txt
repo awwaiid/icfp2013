@@ -1,1 +1,12 @@
-localhost
+asparagus.cs.colostate.edu
+bok-choy.cs.colostate.edu
+cabbage.cs.colostate.edu
+cantaloupe.cs.colostate.edu
+chard.cs.colostate.edu
+cucumber.cs.colostate.edu
+fennel.cs.colostate.edu
+garlic.cs.colostate.edu
+mushroom.cs.colostate.edu
+parsnip.cs.colostate.edu
+pea.cs.colostate.edu
+pumpkin.cs.colostate.edu

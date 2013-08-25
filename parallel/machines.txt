@@ -18,7 +18,6 @@ corn
 cucumber
 dillweed
 eggplant
-endive
 fennel
 garlic
 gourd

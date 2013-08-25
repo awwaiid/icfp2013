@@ -63,3 +63,10 @@ We currently have 60 points by doing brute-force. Now we're working on bucketing
 2013.08.10.12.15
 At Bourbon. Researching SMT to see if that'll help ... bucketing stuff has helped and we are working on solving some of size-9 and 10 problems.
 
+2013.08.11.16.33
+Well SMT probably would have helped. But we didn't do that. Instead we focused on making our technique better and faster as-is. Then late last night I remembered that I have a whole computer lab at our disposal!
+
+So Mike worked on using Parallel::ForkManager set up so that we could run a bunch of these. I went ahead and finally ported the interpreter to OCaml and integrated that -- which gave a significant speedup (but not crazy-fast. An example problem went from 25 seconds to 5 seconds).
+
+Now we have set it to running, and are slowly gathering more points!
+
